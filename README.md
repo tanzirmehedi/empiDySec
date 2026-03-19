@@ -21,11 +21,9 @@ nvidia-smi
 # 2. Install Miniconda (skip if already installed)
 # ================================
 cd ~
-if [ ! -d "$HOME/miniconda3" ]; then
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-  bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3
-fi
-source ~/miniconda3/etc/profile.d/conda.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
 
 # ================================
 # 3. Accept Conda Terms (ignore if already accepted)
@@ -38,6 +36,9 @@ conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r 
 # ================================
 conda create -n tf211gpu python=3.10 -y
 conda activate tf211gpu
+
+which python
+python --version
 
 # ================================
 # 5. Install CUDA & cuDNN
@@ -54,6 +55,10 @@ pip install tensorflow==2.11.0
 # 7. Verify installation
 # ================================
 conda list | egrep "tensorflow|cudatoolkit|cudnn"
+
+echo $CONDA_PREFIX
+ls -l $CONDA_PREFIX/lib/libcudart.so*
+ls -l $CONDA_PREFIX/lib/libcudnn.so*
 
 # ================================
 # 8. Fix CUDA symlinks
@@ -101,5 +106,24 @@ mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
 cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" <<'EOF'
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 EOF
+
+# ================================
+# 12. Jupyter Notebook
+# ================================
+
+conda activate tf211gpu
+pip install notebook
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+jupyter notebook
+
+# Jupyter Verification Cell
+
+import os
+import tensorflow as tf
+
+print("TensorFlow Version:", tf.__version__)
+print("Built with CUDA:", tf.test.is_built_with_cuda())
+print("LD_LIBRARY_PATH:", os.environ.get("LD_LIBRARY_PATH"))
+print("Available GPUs:", tf.config.list_physical_devices('GPU'))
 
 echo "Setup complete!"
