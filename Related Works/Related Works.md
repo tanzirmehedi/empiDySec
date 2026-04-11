@@ -2,7 +2,7 @@
 
 <p><strong>Developed By:</strong> eDySec Research Team</p>
 
-<div style="font-size: 12px; overflow-x: auto;">
+<div style="font-size: 8px; overflow-x: auto;">
 
 | Paper | Venue | Authors | Ecosystem | Analysis Type | Model / Approach | Performance | Feature / Behavior Analysis | Explainability | Model Stability | Kernel-Level |
 |---|---|---|---|---|---|---|---|---|---|---|
