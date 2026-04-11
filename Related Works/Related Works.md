@@ -1,6 +1,8 @@
 # eDySec: A Deep Learning-based Explainable Dynamic Analysis for Detecting Malicious Packages in PyPI Ecosystem
 
-**Developed By:** eDySec Research Team
+<p><strong>Developed By:</strong> eDySec Research Team</p>
+
+<div style="font-size: 8px; overflow-x: auto;">
 
 | Paper | Venue | Authors | Ecosystem | Analysis Type | Model / Approach | Performance | Feature / Behavior Analysis | Explainability | Model Stability | Kernel-Level |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -20,4 +22,6 @@
 | PyGUARD: Knowledge-Mining Framework (LLM + pattern mining) | 2025? | Guo et al. | Multi | Static + knowledge-driven (RAG + LLM, no execution) | Pattern mining (PrefixSpan) + RAG LLM (GPT-4.1) | 99.5% acc, 2 false positives; 219 new PyPI malicious, cross-npm 98% acc | Behavioral action sequences (327 categories) to deterministic/justifiable patterns (304 final) | Natural language reasoning (RAG explanations), no SHAP/LIME | Limited; evaluated on obfuscated/latest datasets, no repeated-run metrics | No |
 | DySec: ML-Based Dynamic Analysis (eBPF) for PyPI | IEEE TIFS 2026 | Mehedi et al. | PyPI | Dynamic (install-time eBPF kernel & user probes) | ML (Random Forest primary) | 95.99% accuracy, RF: Prec 0.97, F1 0.97, FPR 2.63% | 62 candidate dynamic features to 36 final (filetop, opensnoop, TCP, syscall, pattern traces) | No LIME/SHAP; feature importance selection | Real-world robustness, but no formal stability study | Yes (eBPF kernel-level tracing + syscalls) |
 
-© 2026 eDySec Research. All Rights Reserved.
+</div>
+
+<p>© 2026 eDySec Research. All Rights Reserved.</p>
