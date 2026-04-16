@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/badge/Platform-Linux-success.svg" alt="Platform">
 <img src="https://img.shields.io/badge/Focus-PyPI%20Malware%20Detection-critical.svg" alt="Focus">
 <img src="https://img.shields.io/badge/Analysis-Dynamic%20Behavioral%20Security-orange.svg" alt="Analysis">
-<img src="https://img.shields.io/badge/Stability-Analysis-purple.svg" alt="Stability">
+<img src="https://img.shields.io/badge/Stability-Statistical-purple.svg" alt="Stability">
 <img src="https://img.shields.io/badge/XAI-SHAP%20%7C%20LIME-purple.svg" alt="XAI">
 <img src="https://img.shields.io/badge/Status-Research%20Prototype-informational.svg" alt="Status">
 
