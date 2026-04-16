@@ -10,10 +10,10 @@
 
 eDySec is an efficient, stable, and explainable DL-based dynamic analysis framework for detecting malicious packages. It is designed to address the high-dimensional, sparse, and heterogeneous nature of dynamic behavioral data. As illustrated in Figure, eDySec consists of four main phases: 
 
-(i).   Data Preparation    
-(ii).  Feature Selection    
-(iii). Model Selection and Evaluation    
-(iv).  Stability and Explainability Analysis   
+- Data Preparation    
+- Feature Selection    
+- Model Selection and Evaluation    
+- Stability and Explainability Analysis   
 
 
 <p align="center">
@@ -171,8 +171,8 @@ This phase introduces the dataset structure and provides visualization of the un
 
 Run the following notebooks:
 
-``
-Phase (i) Data Preparation/Dataset Overview.ipynb
+``bash
+Phase (i) Data Preparation/Dataset Overview.ipynb    
 Phase (i) Data Preparation/t-SNE Implementation.ipynb
 ``
 
@@ -348,8 +348,8 @@ This configuration is also used in the explainability phase.
 ```bibtex
 @article{mehedi2026edysec,
   title   = {eDySec: A Deep Learning-based Explainable Dynamic Analysis for Detecting Malicious Packages in the PyPI Ecosystem},
-  author  = {Mehedi, Sk. Tanzir and others},
-  year    = {2026}
+  author  = {Will be added},
+  year    = {will be added}
 }
 ```
 
