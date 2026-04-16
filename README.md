@@ -187,10 +187,10 @@ This phase introduces the dataset structure and provides visualization of the un
 
 Run the following notebooks:
 
-``bash
+```bash
 Phase (i) Data Preparation/Dataset Overview.ipynb    
 Phase (i) Data Preparation/t-SNE Implementation.ipynb
-``
+```
 
 This phase produces:
 
