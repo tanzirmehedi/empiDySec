@@ -20,10 +20,13 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
   <img src="Images/framework.jpg" alt="eDySec banner" width="60%">
 </p>
 
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
 ## Dataset Overview
 
 [![DOI](https://zenodo.org/badge/DOI/10.7910/DVN/LBMXJY.svg)](https://doi.org/10.7910/DVN/LBMXJY)
 
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 ## Repository Structure
 
@@ -79,31 +82,43 @@ eDySec/
 └── README.md
 ```
 
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
 ## Prerequisites
 
 Before running the project, ensure that the following requirements are satisfied.
 
-### 1. Operating System
+### 1. Experimental Environment
 
-This project is primarily designed for **Linux-based environments**, as the dynamic trace collection and behavioral analysis pipeline are built around Linux-oriented runtime monitoring.
+The analysis and experiments for eDySec were conducted in a controlled hardware environment with the following specifications.
+
+- **Processor:** 13th Gen Intel Core i9-13900K
+- **Memory:** 128 GB RAM
+- **GPU:** NVIDIA RTX A6000 with 48 GB memory
+- **Operating System:** Ubuntu 22.04 LTS (64-bit)
 
 ### 2. Python Version
 
 Use **Python 3.10**.
 
-### 3. Recommended Environment Setup
+### 3. Running Instructions
 
-Create and activate a virtual environment before installing dependencies.
+### Option 1: pip
 
 ```bash
+git clone https://github.com/tanzirmehedi/eDySec.git
+cd eDySec
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
-For Windows:
+### Option 2: conda
 
 ```bash
-venv\Scripts\activate
+conda create -n edysec python=3.10 -y
+conda activate edysec
+pip install -r requirements.txt
 ```
 
 ### 4. Required Python Packages
@@ -125,21 +140,12 @@ notebook==6.5.6
 transformers==4.49.0
 ```
 
-If a `requirements.txt` file is available, install dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
-
-Otherwise, install the required packages manually in the same Python environment.
-
 ### 5. Jupyter Notebook
-
-Most components in this repository are implemented as **Jupyter notebooks**. Ensure that Jupyter Notebook is installed and available in the active environment.
 
 To launch Jupyter Notebook:
 
 ```bash
+pip install notebook
 jupyter notebook
 ```
 
@@ -152,6 +158,8 @@ Phase (i) Data Preparation/QUT-DV25 Dataset/
 ```
 
 Make sure the dataset files remain in their original repository structure before running the notebooks.
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 ## How to Run the Project
 
