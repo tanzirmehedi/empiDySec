@@ -41,63 +41,7 @@ The experiments were conducted on the **QUT-DV25** dataset, a dynamic behavioral
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-## Repository Structure
-
-```bash
-eDySec/
-├── Phase (i) Data Preparation/
-│   ├── QUT-DV25 Dataset/
-│   │   ├── QUT-DV25_Filetop_Traces/
-│   │   ├── QUT-DV25_Install_Traces/
-│   │   ├── QUT-DV25_Opensnoop_Traces/
-│   │   ├── QUT-DV25_Pattern_Traces/
-│   │   ├── QUT-DV25_SysCall_Traces/
-│   │   └── QUT-DV25_TCP_Traces/
-│   ├── Dataset Overview.ipynb
-│   ├── dataset_overview.png
-│   ├── qutdv25_trace_sources.png
-│   ├── t-SNE Implementation.ipynb
-│   ├── tsne_Dynamic.png
-│   ├── tsne_Metadata.png
-│   └── tsne_Static.png
-├── Phase (ii) Feature Selection/
-│   ├── Feature Selection Methods/
-│   │   ├── ANOVA/
-│   │   ├── CORR/
-│   │   ├── FLAML/
-│   │   ├── PSO/
-│   │   └── WOA/
-│   ├── Feature Selection Result/
-│   │   ├── Combined.xlsx
-│   │   ├── Filetop.xlsx
-│   │   ├── Install.xlsx
-│   │   ├── Opensnoop.xlsx
-│   │   ├── Pattern.xlsx
-│   │   ├── SysCall.xlsx
-│   │   └── TCP.xlsx
-│   ├── Feature Selection Overview.csv
-│   ├── Features Selection Overview.ipynb
-│   ├── feature_selection.png
-│   └── six_feature_selection.png
-├── Phase (iii) DL Model Selection & Evaluation/
-│   ├── ANOVA/
-│   └── FLAML/
-├── Phase (iv) Stability & Explainability/
-│   ├── Explainability Analysis/
-│   │   ├── LIME Outputs/
-│   │   ├── SHAP Outputs/
-│   │   └── FLAML DL MLP Combined XAI.ipynb
-│   └── Stability Analysis/
-│       ├── Stability Analysis Outputs/
-│       └── Stability Analysis.ipynb
-├── Related Works/
-├── LICENSE
-└── README.md
-```
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-## Prerequisites
+## Running Prerequisites
 
 Before running the project, ensure that the following requirements are satisfied.
 
@@ -174,6 +118,62 @@ Make sure the dataset files remain in their original repository structure before
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
+## Repository Structure
+
+```bash
+eDySec/
+├── Phase (i) Data Preparation/
+│   ├── QUT-DV25 Dataset/
+│   │   ├── QUT-DV25_Filetop_Traces/
+│   │   ├── QUT-DV25_Install_Traces/
+│   │   ├── QUT-DV25_Opensnoop_Traces/
+│   │   ├── QUT-DV25_Pattern_Traces/
+│   │   ├── QUT-DV25_SysCall_Traces/
+│   │   └── QUT-DV25_TCP_Traces/
+│   ├── Dataset Overview.ipynb
+│   ├── dataset_overview.png
+│   ├── qutdv25_trace_sources.png
+│   ├── t-SNE Implementation.ipynb
+│   ├── tsne_Dynamic.png
+│   ├── tsne_Metadata.png
+│   └── tsne_Static.png
+├── Phase (ii) Feature Selection/
+│   ├── Feature Selection Methods/
+│   │   ├── ANOVA/
+│   │   ├── CORR/
+│   │   ├── FLAML/
+│   │   ├── PSO/
+│   │   └── WOA/
+│   ├── Feature Selection Result/
+│   │   ├── Combined.xlsx
+│   │   ├── Filetop.xlsx
+│   │   ├── Install.xlsx
+│   │   ├── Opensnoop.xlsx
+│   │   ├── Pattern.xlsx
+│   │   ├── SysCall.xlsx
+│   │   └── TCP.xlsx
+│   ├── Feature Selection Overview.csv
+│   ├── Features Selection Overview.ipynb
+│   ├── feature_selection.png
+│   └── six_feature_selection.png
+├── Phase (iii) DL Model Selection & Evaluation/
+│   ├── ANOVA/
+│   └── FLAML/
+├── Phase (iv) Stability & Explainability/
+│   ├── Explainability Analysis/
+│   │   ├── LIME Outputs/
+│   │   ├── SHAP Outputs/
+│   │   └── FLAML DL MLP Combined XAI.ipynb
+│   └── Stability Analysis/
+│       ├── Stability Analysis Outputs/
+│       └── Stability Analysis.ipynb
+├── Related Works/
+├── LICENSE
+└── README.md
+```
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
 ## How to Run the Project
 
 The repository follows a four-phase execution workflow. For reproducibility and consistency, run the notebooks in the order below.
@@ -231,7 +231,7 @@ The generated and consolidated feature selection outputs are available under:
 Phase (ii) Feature Selection/Feature Selection Result/
 ```
 
-### Phase 3: Deep Learning Model Selection and Evaluation
+### Phase 3: Model Selection and Evaluation
 
 This phase trains and evaluates the deep learning models using the selected feature subsets.
 
@@ -268,32 +268,7 @@ Each notebook generates evaluation outputs inside its corresponding output direc
 * evaluation summary files
 * training logs
 
-### Phase 4: Explainability Analysis
-
-This phase generates SHAP- and LIME-based explanations for the best-performing configuration.
-
-Run:
-
-```bash
-Phase (iv) Stability & Explainability/Explainability Analysis/FLAML DL MLP Combined XAI.ipynb
-```
-
-This notebook produces outputs in:
-
-```bash
-Phase (iv) Stability & Explainability/Explainability Analysis/LIME Outputs/
-Phase (iv) Stability & Explainability/Explainability Analysis/SHAP Outputs/
-```
-
-Typical outputs include:
-
-* SHAP global feature importance plots
-* SHAP summary and waterfall plots
-* LIME dashboards
-* local explanations for benign and malicious samples
-* instance-level explanation files in HTML and PNG formats
-
-### Phase 5: Stability Analysis
+### Phase 4: Stability and Explainability Analysis
 
 This phase performs comparative stability analysis across models and feature selection methods.
 
@@ -318,6 +293,31 @@ Typical outputs include:
 * p-value comparison matrices
 * compact summaries of best-performing models
 
+
+This phase generates SHAP- and LIME-based explanations for the best-performing configuration.
+
+Run:
+
+```bash
+Phase (iv) Stability & Explainability/Explainability Analysis/FLAML DL MLP Combined XAI.ipynb
+```
+
+This notebook produces outputs in:
+
+```bash
+Phase (iv) Stability & Explainability/Explainability Analysis/LIME Outputs/
+Phase (iv) Stability & Explainability/Explainability Analysis/SHAP Outputs/
+```
+
+Typical outputs include:
+
+* SHAP global feature importance plots
+* SHAP summary and waterfall plots
+* LIME dashboards
+* local explanations for benign and malicious samples
+* instance-level explanation files in HTML and PNG formats
+
+
 ## Recommended End-to-End Execution Order
 
 For a full reproduction of the project workflow, run the repository in the following order:
@@ -331,7 +331,7 @@ For a full reproduction of the project workflow, run the repository in the follo
 
 ## Main Outputs
 
-The repository contains or generates the following outputs:
+The repository generates the following outputs:
 
 * dataset overview figures
 * trace source figures
