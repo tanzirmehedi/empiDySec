@@ -1,10 +1,6 @@
-### eDySec: A Deep Learning-based Explainable Dynamic Analysis Framework for Detecting Malicious Packages in the PyPI Ecosystem
+#### eDySec: A Deep Learning-based Explainable Dynamic Analysis Framework for Detecting Malicious Packages in the PyPI Ecosystem
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<div align="center">
-
-<!-- Replace these with your real badges -->
 
 <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python">
 <img src="https://img.shields.io/badge/Platform-Linux-success.svg" alt="Platform">
@@ -14,15 +10,7 @@
 <img src="https://img.shields.io/badge/XAI-SHAP%20%7C%20LIME-purple.svg" alt="XAI">
 <img src="https://img.shields.io/badge/Status-Research%20Prototype-informational.svg" alt="Status">
 
-<br><br>
-
-**eDySec** is an explainable deep learning-based dynamic behavioral analysis framework designed to detect malicious Python packages in the **PyPI ecosystem** by monitoring **install-time** and **post-installation** runtime behavior.
-
-Unlike approaches that rely only on static code artifacts or package metadata, eDySec directly observes behavioral signals generated during execution, enabling it to capture **staged payloads**, **runtime-triggered actions**, **environment-aware logic**, and other malicious behaviors that may remain hidden before execution.
-
-</div>
-
----
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 ## Visual Overview
 
