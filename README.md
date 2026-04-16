@@ -15,7 +15,6 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 - Model Selection and Evaluation    
 - Stability and Explainability Analysis   
 
-
 <p align="center">
   <img src="Images/framework.jpg" alt="eDySec banner" width="60%">
 </p>
@@ -177,6 +176,10 @@ eDySec/
 ## How to Run the Project
 
 The repository follows a four-phase execution workflow. For reproducibility and consistency, run the notebooks in the order below.
+
+<p align="center">
+  <img src="Images/edysec.gif" alt="eDySec banner" width="60%">
+</p>
 
 ### Phase 1: Data Preparation
 
