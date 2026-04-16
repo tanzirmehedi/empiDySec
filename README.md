@@ -24,7 +24,20 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 
 ## Dataset Overview
 
-[![DOI](https://zenodo.org/badge/DOI/10.7910/DVN/LBMXJY.svg)](https://doi.org/10.7910/DVN/LBMXJY)
+The experiments were conducted on the **QUT-DV25** dataset, a dynamic behavioral dataset designed for malicious package detection in the **PyPI ecosystem**.
+
+### Dataset Summary
+
+- **Dataset Name:** QUT-DV25
+- **Target Task:** Binary classification of benign and malicious Python packages
+- **Ecosystem:** PyPI
+- **Total Packages:** 14,271 (7,127 malicious packages)
+- **Analysis Type:** Dynamic behavioral analysis
+- **Execution Phases:** Install-time and post-installation
+- **Trace Categories:** Filetop, Opensnoop, Install, TCP, SysCall, Pattern
+- **Feature Representation:** Individual trace-based features and a combined feature space
+- **Output Classes:** Benign / Malicious
+- **Dataset DOI:** https://doi.org/10.7910/DVN/LBMXJY
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
