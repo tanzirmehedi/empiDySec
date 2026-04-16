@@ -10,10 +10,10 @@
 
 eDySec is an efficient, stable, and explainable DL-based dynamic analysis framework for detecting malicious packages. It is designed to address the high-dimensional, sparse, and heterogeneous nature of dynamic behavioral data. As illustrated in Figure, eDySec consists of four main phases: 
 
-(i).   **Data Preparation**    
-(ii).  **Feature Selection**    
-(iii). **Model Selection and Evaluation**    
-(iv).  **Stability and Explainability Analysis**    
+(i).   Data Preparation    
+(ii).  Feature Selection    
+(iii). Model Selection and Evaluation    
+(iv).  Stability and Explainability Analysis   
 
 
 <p align="center">
