@@ -17,7 +17,7 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 
 
 <p align="center">
-  <img src="Images/edysec.gif" alt="eDySec banner" width="60%">
+  <img src="Images/framework.jpg" alt="eDySec banner" width="60%">
 </p>
 
 ## Dataset Overview
