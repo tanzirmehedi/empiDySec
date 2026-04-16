@@ -1,4 +1,4 @@
-#### eDySec: A Deep Learning-based Explainable Dynamic Analysis Framework for Detecting Malicious Packages in the PyPI Ecosystem
+#### A Deep Learning-based Explainable Dynamic Analysis Framework for Detecting Malicious Packages in the PyPI Ecosystem
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
@@ -15,6 +15,10 @@
 <p align="center">
   <em>Replace <code>docs/images/edysec-banner.png</code> with your main project banner or graphical abstract.</em>
 </p>
+
+## Dataset Overview
+
+[![DOI](https://zenodo.org/badge/DOI/10.7910/DVN/LBMXJY.svg)](https://doi.org/10.7910/DVN/LBMXJY)
 
 ## Project Structure
 
