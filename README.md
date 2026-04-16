@@ -9,7 +9,7 @@
 ## Visual Overview
 
 <p align="center">
-  <img src="docs/images/edysec-banner.png" alt="eDySec banner" width="100%">
+  <img src="Images/edysec.gif" alt="eDySec banner" width="100%">
 </p>
 
 <p align="center">
