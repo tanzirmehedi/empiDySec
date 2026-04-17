@@ -12,5 +12,5 @@ notebook==6.5.6
 terminado==0.17.1
 shap==0.43.0
 flaml[automl]==2.5.0
-transformers==4.38.2
+transformers==5.0.0rc3
 threadpoolctl==3.1.0
