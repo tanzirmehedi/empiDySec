@@ -18,6 +18,7 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 <p align="center">
   <img src="Images/framework.jpg" alt="eDySec Framework" width="60%">
 </p>
+<p align="center"><b>Figure 1: Proposed eDySec framework for detecting malicious PyPI packages.</b></p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
@@ -26,6 +27,11 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 The experiments were conducted on the **QUT-DV25** dataset, a dynamic behavioral dataset designed for malicious package detection in the **PyPI ecosystem**.
 
 ### Dataset Summary
+
+<p align="center">
+  <img src="Images/dataset_overview.jpg" alt="Dataset Overview" width="60%">
+</p>
+<p align="center"><i>Figure 2: Overview of the QUT-DV25 dataset: (a) statistics of the feature sets across traces; (b) class distribution of benign and malicious packages.</i></p>
 
 - **Dataset Name:** QUT-DV25
 - **Target Task:** Binary classification of benign and malicious Python packages
@@ -51,10 +57,6 @@ eDySec analyzes six core trace categories, plus a combined representation:
 | **SysCall**   | System call-level runtime interactions                                |
 | **Pattern**   | Behavioral pattern representations extracted from execution artifacts |
 | **Combined**  | Joint representation built from all trace categories                  |
-
-<p align="center">
-  <img src="Images/dataset_overview.jpg" alt="Dataset Overview" width="60%">
-</p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
