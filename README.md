@@ -38,6 +38,20 @@ The experiments were conducted on the **QUT-DV25** dataset, a dynamic behavioral
 - **Output Classes:** Benign / Malicious
 - **Dataset DOI:** https://doi.org/10.7910/DVN/LBMXJY
 
+### Trace Categories
+
+eDySec analyzes six core trace categories, plus a combined representation:
+
+| Trace Type    | Description                                                           |
+| ------------- | --------------------------------------------------------------------- |
+| **Filetop**   | File activity summaries and file interaction behavior                 |
+| **Opensnoop** | File open operations and related access patterns                      |
+| **Install**   | Installation-phase activity and package setup behavior                |
+| **TCP**       | Network communication behavior                                        |
+| **SysCall**   | System call-level runtime interactions                                |
+| **Pattern**   | Behavioral pattern representations extracted from execution artifacts |
+| **Combined**  | Joint representation built from all trace categories                  |
+
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 ## Running Prerequisites
