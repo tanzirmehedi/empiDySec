@@ -16,7 +16,7 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 - Stability and Explainability Analysis   
 
 <p align="center">
-  <img src="Images/framework.jpg" alt="eDySec banner" width="60%">
+  <img src="Images/framework.jpg" alt="eDySec Framework" width="60%">
 </p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
@@ -51,6 +51,10 @@ eDySec analyzes six core trace categories, plus a combined representation:
 | **SysCall**   | System call-level runtime interactions                                |
 | **Pattern**   | Behavioral pattern representations extracted from execution artifacts |
 | **Combined**  | Joint representation built from all trace categories                  |
+
+<p align="center">
+  <img src="Images/framework.jpg" alt="Dataset Overview" width="60%">
+</p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
