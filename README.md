@@ -277,7 +277,7 @@ Make sure the dataset files remain in their original repository structure before
 The repository follows a four-phase execution workflow. For reproducibility and consistency, run the notebooks in the order below.
 
 <p align="center">
-  <img src="Images/edysec.gif" alt="eDySec banner" width="60%">
+  <img src="Images/motivation.jpg" alt="eDySec banner" width="60%">
 </p>
 
 ### Phase 1: Data Preparation
