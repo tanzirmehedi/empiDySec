@@ -31,7 +31,7 @@ The experiments were conducted on the **QUT-DV25** dataset, a dynamic behavioral
 <p align="center">
   <img src="Images/dataset_overview.jpg" alt="Dataset Overview" width="60%">
 </p>
-<p align="center"><i>Figure 2: Overview of the QUT-DV25 dataset: (a) statistics of the feature sets across traces; (b) class distribution of benign and malicious packages.</i></p>
+<p align="center"><b>Figure 2: Overview of the QUT-DV25 dataset: (a) statistics; (b) class distribution.</b></p>
 
 - **Dataset Name:** QUT-DV25
 - **Target Task:** Binary classification of benign and malicious Python packages
