@@ -184,10 +184,21 @@ eDySec/
 ├── Phase (ii) Feature Selection/
 │   ├── Feature Selection Methods/
 │   │   ├── ANOVA/
+│   │   │   ├── Feature_Selection_Combined_ANOVA.ipynb
+│   │   │   ├── Feature_Selection_Filetop_ANOVA.ipynb
+│   │   │   ├── Feature_Selection_Install_ANOVA.ipynb
+│   │   │   ├── Feature_Selection_Opensnoop_ANOVA.ipynb
+│   │   │   ├── Feature_Selection_Pattern_ANOVA.ipynb
+│   │   │   ├── Feature_Selection_SysCall_ANOVA.ipynb
+│   │   │   └── Feature_Selection_TCP_ANOVA.ipynb
 │   │   ├── CORR/
+│   │   │   └── ...
 │   │   ├── FLAML/
+│   │   │   └── ...
 │   │   ├── PSO/
+│   │   │   └── ...
 │   │   └── WOA/
+│   │       └── ...
 │   ├── Feature Selection Result/
 │   │   ├── Combined.xlsx
 │   │   ├── Filetop.xlsx
@@ -202,7 +213,47 @@ eDySec/
 │   └── six_feature_selection.png
 ├── Phase (iii) DL Model Selection & Evaluation/
 │   ├── ANOVA/
-│   └── FLAML/
+│   │   └── ...
+│   ├── CORR/
+│   │   └── ...
+│   ├── FLAML/
+│   │   ├── Combined/
+│   │   │   └── ...
+│   │   ├── Filetop/
+│   │   │   └── ...
+│   │   ├── Install/
+│   │   │   └── ...
+│   │   ├── Opensnoop/
+│   │   │   └── ...
+│   │   ├── Pattern/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Attention_BERT/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Attention_DistilGPT2/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Attention_Transformer/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Classical_CNN/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Classical_LeNet/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Classical_MDCNN/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Classical_MLP/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Classical_NN/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Pre_Attention_LSTM/
+│   │   │   ├── Evaluation_Outputs_Pattern_FLAML_Pre_Attention_RNN/
+│   │   │   ├── Pattern_FLAML_BERT.ipynb
+│   │   │   ├── Pattern_FLAML_CNN.ipynb
+│   │   │   ├── Pattern_FLAML_DistilGPT2.ipynb
+│   │   │   ├── Pattern_FLAML_LeNet.ipynb
+│   │   │   ├── Pattern_FLAML_LSTM.ipynb
+│   │   │   ├── Pattern_FLAML_MDCNN.ipynb
+│   │   │   ├── Pattern_FLAML_MLP.ipynb
+│   │   │   ├── Pattern_FLAML_NN.ipynb
+│   │   │   ├── Pattern_FLAML_RNN.ipynb
+│   │   │   └── Pattern_FLAML_Transformer.ipynb
+│   │   ├── SysCall/
+│   │   │   └── ...
+│   │   └── TCP/
+│   │       └── ...
+│   ├── PSO/
+│   │   └── ...
+│   └── WOA/
+│       └── ...
 ├── Phase (iv) Stability & Explainability/
 │   ├── Explainability Analysis/
 │   │   ├── LIME Outputs/
@@ -212,6 +263,8 @@ eDySec/
 │       ├── Stability Analysis Outputs/
 │       └── Stability Analysis.ipynb
 ├── Related Works/
+├── Images/
+├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
