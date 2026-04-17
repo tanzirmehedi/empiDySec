@@ -279,6 +279,7 @@ The repository follows a four-phase execution workflow. For reproducibility and 
 <p align="center">
   <img src="Images/motivation.jpg" alt="eDySec banner" width="60%">
 </p>
+<p align="center"><b>Figure 3: Overall system architecture of the proposed eDySec framework.</b></p>
 
 ### Phase 1: Data Preparation
 
