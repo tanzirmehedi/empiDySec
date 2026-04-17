@@ -164,6 +164,112 @@ Make sure the dataset files remain in their original repository structure before
 
 ## Repository Structure
 
+```json
+{
+  "eDySec": {
+    "Phase (i) Data Preparation": {
+      "QUT-DV25 Dataset": {
+        "QUT-DV25_Filetop_Traces": {},
+        "QUT-DV25_Install_Traces": {},
+        "QUT-DV25_Opensnoop_Traces": {},
+        "QUT-DV25_Pattern_Traces": {},
+        "QUT-DV25_SysCall_Traces": {},
+        "QUT-DV25_TCP_Traces": {}
+      },
+      "Dataset Overview.ipynb": null,
+      "dataset_overview.png": null,
+      "qutdv25_trace_sources.png": null,
+      "t-SNE Implementation.ipynb": null,
+      "tsne_Dynamic.png": null,
+      "tsne_Metadata.png": null,
+      "tsne_Static.png": null
+    },
+    "Phase (ii) Feature Selection": {
+      "Feature Selection Methods": {
+        "ANOVA": {
+          "Feature_Selection_Combined_ANOVA.ipynb": null,
+          "Feature_Selection_Filetop_ANOVA.ipynb": null,
+          "Feature_Selection_Install_ANOVA.ipynb": null,
+          "Feature_Selection_Opensnoop_ANOVA.ipynb": null,
+          "Feature_Selection_Pattern_ANOVA.ipynb": null,
+          "Feature_Selection_SysCall_ANOVA.ipynb": null,
+          "Feature_Selection_TCP_ANOVA.ipynb": null
+        },
+        "CORR": "...",
+        "FLAML": "...",
+        "PSO": "...",
+        "WOA": "..."
+      },
+      "Feature Selection Result": {
+        "Combined.xlsx": null,
+        "Filetop.xlsx": null,
+        "Install.xlsx": null,
+        "Opensnoop.xlsx": null,
+        "Pattern.xlsx": null,
+        "SysCall.xlsx": null,
+        "TCP.xlsx": null
+      },
+      "Feature Selection Overview.csv": null,
+      "Features Selection Overview.ipynb": null,
+      "feature_selection.png": null,
+      "six_feature_selection.png": null
+    },
+    "Phase (iii) DL Model Selection & Evaluation": {
+      "ANOVA": "...",
+      "CORR": "...",
+      "FLAML": {
+        "Combined": "...",
+        "Filetop": "...",
+        "Install": "...",
+        "Opensnoop": "...",
+        "Pattern": {
+          "Evaluation_Outputs_Pattern_FLAML_Attention_BERT": {},
+          "Evaluation_Outputs_Pattern_FLAML_Attention_DistilGPT2": {},
+          "Evaluation_Outputs_Pattern_FLAML_Attention_Transformer": {},
+          "Evaluation_Outputs_Pattern_FLAML_Classical_CNN": {},
+          "Evaluation_Outputs_Pattern_FLAML_Classical_LeNet": {},
+          "Evaluation_Outputs_Pattern_FLAML_Classical_MDCNN": {},
+          "Evaluation_Outputs_Pattern_FLAML_Classical_MLP": {},
+          "Evaluation_Outputs_Pattern_FLAML_Classical_NN": {},
+          "Evaluation_Outputs_Pattern_FLAML_Pre_Attention_LSTM": {},
+          "Evaluation_Outputs_Pattern_FLAML_Pre_Attention_RNN": {},
+          "Pattern_FLAML_BERT.ipynb": null,
+          "Pattern_FLAML_CNN.ipynb": null,
+          "Pattern_FLAML_DistilGPT2.ipynb": null,
+          "Pattern_FLAML_LeNet.ipynb": null,
+          "Pattern_FLAML_LSTM.ipynb": null,
+          "Pattern_FLAML_MDCNN.ipynb": null,
+          "Pattern_FLAML_MLP.ipynb": null,
+          "Pattern_FLAML_NN.ipynb": null,
+          "Pattern_FLAML_RNN.ipynb": null,
+          "Pattern_FLAML_Transformer.ipynb": null
+        },
+        "SysCall": "...",
+        "TCP": "..."
+      },
+      "PSO": "...",
+      "WOA": "..."
+    },
+    "Phase (iv) Stability & Explainability": {
+      "Explainability Analysis": {
+        "LIME Outputs": {},
+        "SHAP Outputs": {},
+        "FLAML DL MLP Combined XAI.ipynb": null
+      },
+      "Stability Analysis": {
+        "Stability Analysis Outputs": {},
+        "Stability Analysis.ipynb": null
+      }
+    },
+    "Related Works": {},
+    "Images": {},
+    "requirements.txt": null,
+    "LICENSE": null,
+    "README.md": null
+  }
+}
+```
+
 ```bash
 eDySec/
 ├── Phase (i) Data Preparation/
