@@ -272,7 +272,7 @@ Make sure the dataset files remain in their original repository structure before
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-## How to Run the Project
+## How to Run the Project (Individual Script)
 
 The repository follows a four-phase execution workflow. For reproducibility and consistency, run the notebooks in the order below.
 
@@ -484,6 +484,221 @@ The strongest reported configuration in this repository is:
 * **MLP model**
 
 This configuration is also used in the explainability phase.
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
+## How to Run the Project (using edysec_runner.py)
+
+This repository includes `edysec_runner.py`, a Python utility to help you **check the project structure**, **set up the environment**, and **run all Jupyter notebooks (`.ipynb`)** across folders and subfolders in the correct order.
+
+It is designed for only the eDySec project.
+
+---
+
+### What the Runner Does
+
+The script supports the following tasks:
+
+- validates the repository structure
+- checks that key folders and files exist
+- installs dependencies from `requirements.txt`
+- discovers notebooks recursively inside subfolders
+- runs notebooks in the expected workflow order
+- executes each notebook from its own directory so relative paths continue to work
+- optionally saves executed notebooks to a separate output directory
+- writes an execution summary report
+- can continue even if some notebooks fail
+
+---
+
+### Main Commands
+
+#### 1. Check the repository structure
+
+Use this first to verify that the expected folders and files are present.
+
+```bash
+python edysec_runner.py check
+```
+
+#### 2. Set up the environment
+
+This installs the required Python packages from `requirements.txt`.
+
+```bash
+python edysec_runner.py setup
+```
+
+#### 3. Run the full workflow
+
+This runs all notebooks across all phases.
+
+```bash
+python edysec_runner.py run --phase all --continue-on-error
+```
+
+---
+
+### Useful Examples
+
+#### Only list what will run
+
+This performs a dry run without executing notebooks.
+
+```bash
+python edysec_runner.py run --dry-run
+```
+
+#### Run only Phase 2
+
+```bash
+python edysec_runner.py run --phase 2
+```
+
+#### Run only FLAML notebooks
+
+```bash
+python edysec_runner.py run --phase all --method FLAML
+```
+
+#### Run only FLAML Pattern notebooks
+
+```bash
+python edysec_runner.py run --phase 3 --method FLAML --trace Pattern
+```
+
+#### Overwrite the original notebooks
+
+By default, executed notebooks are saved separately. If you want to overwrite the original notebooks instead, use:
+
+```bash
+python edysec_runner.py run --in-place --continue-on-error
+```
+
+---
+
+### Default Outputs
+
+By default, the script saves executed notebooks into:
+
+```text
+executed_notebooks/
+```
+
+It also writes an execution summary file:
+
+```text
+execution_summary.json
+```
+
+---
+
+### Recommended Execution Order
+
+For a complete end-to-end workflow, run the commands in this order:
+
+```bash
+python edysec_runner.py check
+python edysec_runner.py setup
+python edysec_runner.py run --phase all --continue-on-error
+```
+
+---
+
+### Phase-Based Execution
+
+If your project follows a multi-phase workflow, you can run specific phases only.
+
+Example:
+
+```bash
+python edysec_runner.py run --phase 1
+python edysec_runner.py run --phase 2
+python edysec_runner.py run --phase 3
+python edysec_runner.py run --phase 4
+```
+
+You can also combine phase selection with method and trace filtering.
+
+Example:
+
+```bash
+python edysec_runner.py run --phase 3 --method FLAML --trace Pattern
+```
+
+---
+
+### Notes
+
+- The script executes each notebook from its **own folder**.
+- This is important for notebooks that use **relative paths**.
+- The script is suitable for projects with **folders and subfolders**.
+- It is especially useful when notebooks depend on a fixed repository layout.
+
+---
+
+### Expected Dataset Location
+
+If your notebooks rely on the dataset being stored in a specific location, keep the dataset in the original repository structure.
+
+For example, in the eDySec layout the dataset is expected under:
+
+```text
+Phase (i) Data Preparation/QUT-DV25 Dataset/
+```
+
+Do not move dataset files unless you also update the notebook paths.
+
+---
+
+### Troubleshooting
+
+#### 1. `requirements.txt` not found
+Make sure you are running the script from the repository root.
+
+#### 2. Notebook path errors
+This usually happens when dataset folders or relative paths are missing or changed.
+
+#### 3. Some notebooks fail but others should continue
+Use:
+
+```bash
+python edysec_runner.py run --phase all --continue-on-error
+```
+
+#### 4. You only want to preview the execution plan
+Use:
+
+```bash
+python edysec_runner.py run --dry-run
+```
+
+---
+
+### Example Workflow
+
+```bash
+# Step 1: validate repository structure
+python edysec_runner.py check
+
+# Step 2: install dependencies
+python edysec_runner.py setup
+
+# Step 3: preview the notebooks that will run
+python edysec_runner.py run --dry-run
+
+# Step 4: execute everything
+python edysec_runner.py run --phase all --continue-on-error
+```
+
+---
+
+### Output Summary
+
+After execution, check:
+
+- `executed_notebooks/` for executed notebook copies
+- `execution_summary.json` for run status and summary information
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
