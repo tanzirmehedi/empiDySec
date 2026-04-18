@@ -441,9 +441,9 @@ Typical outputs include:
 - local explanations for benign and malicious samples
 - instance-level explanation files in HTML and PNG formats
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
-## Recommended End-to-End Execution Order
+### Recommended End-to-End Execution Order
 
 For a full reproduction of the project workflow, run the repository in the following order:
 
@@ -454,9 +454,9 @@ For a full reproduction of the project workflow, run the repository in the follo
 5. `FLAML DL MLP Combined XAI.ipynb`
 6. `Stability Analysis.ipynb`
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
-## Core Outputs
+### Core Outputs
 
 The repository generates the following outputs:
 
@@ -473,9 +473,9 @@ The repository generates the following outputs:
 * LIME dashboards and local explanations
 * stability analysis figures and statistical reports
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
-## Best Reported Configuration
+### Best Reported Configuration
 
 The strongest reported configuration in this repository is:
 
