@@ -704,6 +704,15 @@ After execution, check:
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
+## Note on Model Naming Consistency
+
+In this repository and the accompanying paper, the correct model name is MDCNN (Multi-Dimensional Convolutional Neural Network).
+Due to a typographical inconsistency, the name MCDCNN may appear in parts of the analysis code and intermediate results.
+
+Please note that MCDCNN is a typo and refers to the same MDCNN model used throughout the paper. All results labeled as MCDCNN should be interpreted as MDCNN.
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
 ## Citation
 
 ```bibtex
