@@ -554,7 +554,7 @@ python edysec_runner.py run --dry-run
 #### Run only Phase 2
 
 ```bash
-python edysec_runner.py run --phase 2
+python edysec_runner.py run --phase 1
 ```
 
 #### Run only FLAML notebooks

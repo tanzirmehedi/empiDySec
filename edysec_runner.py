@@ -169,9 +169,33 @@ def install_requirements(repo_root: Path, upgrade_pip: bool = False) -> None:
     if not req_file.exists():
         raise FileNotFoundError(f"requirements.txt not found at {req_file}")
 
+    if not (sys.version_info.major == 3 and sys.version_info.minor == 10):
+        raise RuntimeError(
+            "Dependency setup requires Python 3.10.x for this repository. "
+            "Current interpreter is "
+            f"{platform.python_version()} at {sys.executable}.\n"
+            "The pinned versions in requirements.txt (for example pandas==1.5.3 and tensorflow==2.11.0) "
+            "are not compatible with Python 3.12.\n"
+            "Create or activate a Python 3.10 environment, then run setup again."
+        )
+
     if upgrade_pip:
         info("Upgrading pip...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+
+    info("Bootstrapping packaging tools (pip/setuptools/wheel)...")
+    subprocess.check_call(
+        [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "--upgrade",
+            "pip",
+            "setuptools",
+            "wheel",
+        ]
+    )
 
     info("Installing repository dependencies...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", str(req_file)])
@@ -507,7 +531,14 @@ def main() -> int:
     if args.command == "setup":
         print_environment_summary(repo_root)
         validate_repo_structure(repo_root)
-        install_requirements(repo_root, upgrade_pip=args.upgrade_pip)
+        try:
+            install_requirements(repo_root, upgrade_pip=args.upgrade_pip)
+        except (RuntimeError, FileNotFoundError) as exc:
+            err(str(exc))
+            return 2
+        except subprocess.CalledProcessError as exc:
+            err(f"Dependency installation failed with exit code {exc.returncode}: {exc.cmd}")
+            return 1
         info("Setup complete.")
         return 0
 
