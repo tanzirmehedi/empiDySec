@@ -9,21 +9,20 @@ What this script does
 3. Discovers notebooks across nested folders and subfolders.
 4. Executes notebooks in the correct phase order.
 5. Saves executed notebook copies while preserving the original folder structure.
-
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import os
 import platform
+import shutil
 import subprocess
 import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, List, Optional, Sequence
+from typing import List, Optional, Sequence
 
 try:
     import nbformat
@@ -39,6 +38,10 @@ except ImportError as exc:  # pragma: no cover
 PHASE1_NOTEBOOKS = [
     "Phase (i) Data Preparation/Dataset Overview.ipynb",
     "Phase (i) Data Preparation/t-SNE Implementation.ipynb",
+]
+
+PHASE2_PRIORITY = [
+    "Phase (ii) Feature Selection/Features Selection Overview.ipynb",
 ]
 
 PHASE4_PRIORITY = [
@@ -72,6 +75,49 @@ class RunResult:
 # ------------------------------
 # Utility helpers
 # ------------------------------
+def build_dataset_sources(repo_root: Path) -> dict[str, Path]:
+    """Index dataset CSV files by basename from Phase (i), then from the repo."""
+    sources: dict[str, Path] = {}
+
+    dataset_root = repo_root / "Phase (i) Data Preparation" / "QUT-DV25 Dataset"
+    if dataset_root.exists():
+        for csv_file in sorted(dataset_root.rglob("*.csv")):
+            sources[csv_file.name] = csv_file
+
+    # Fallback: if a CSV exists elsewhere (for example generated artifacts), expose it too.
+    for csv_file in sorted(repo_root.rglob("QUT-DV25_*_Traces.csv")):
+        sources.setdefault(csv_file.name, csv_file)
+
+    return sources
+
+
+def phase2_notebook_requires_missing_combined(notebook_path: Path, dataset_sources: dict[str, Path]) -> bool:
+    if "Phase (ii) Feature Selection" not in str(notebook_path):
+        return False
+    if "_Combined_" not in notebook_path.name:
+        return False
+    return "QUT-DV25_Combined_Traces.csv" not in dataset_sources
+
+
+def stage_dataset_aliases_for_notebook(
+    notebook_path: Path,
+    dataset_sources: dict[str, Path],
+) -> None:
+    """Ensure notebooks can resolve bare dataset filenames via local aliases."""
+    notebook_dir = notebook_path.parent
+
+    for filename, source in dataset_sources.items():
+        target = notebook_dir / filename
+        if target.exists() or source.resolve() == target.resolve():
+            continue
+
+        try:
+            target.symlink_to(source)
+        except OSError:
+            # Filesystem or permissions may block symlinks; copy as a safe fallback.
+            shutil.copy2(source, target)
+
+
 def log(message: str) -> None:
     print(message, flush=True)
 
@@ -231,11 +277,15 @@ def collect_existing_paths(repo_root: Path, relative_paths: Sequence[str]) -> Li
 
 def discover_phase2_notebooks(repo_root: Path, method: str = "all") -> List[Path]:
     base = repo_root / "Phase (ii) Feature Selection" / "Feature Selection Methods"
+    notebooks: List[Path] = []
+
+    # Include Phase (ii) overview notebook first.
+    notebooks.extend(collect_existing_paths(repo_root, PHASE2_PRIORITY))
+
     if not base.exists():
-        return []
+        return notebooks
 
     methods = FEATURE_METHODS if method == "all" else [method]
-    notebooks: List[Path] = []
 
     for m in methods:
         method_dir = base / m
@@ -246,7 +296,16 @@ def discover_phase2_notebooks(repo_root: Path, method: str = "all") -> List[Path
             if should_skip_path(path):
                 continue
             notebooks.append(path)
-    return notebooks
+
+    # Deduplicate while preserving order
+    unique: List[Path] = []
+    seen: set[Path] = set()
+    for nb in notebooks:
+        resolved = nb.resolve()
+        if resolved not in seen:
+            seen.add(resolved)
+            unique.append(nb)
+    return unique
 
 
 def discover_phase3_notebooks(repo_root: Path, method: str = "all", trace: str = "all") -> List[Path]:
@@ -302,7 +361,7 @@ def discover_all_notebooks(repo_root: Path, method: str = "all", trace: str = "a
     notebooks.extend(discover_phase4_notebooks(repo_root))
 
     unique: List[Path] = []
-    seen = set()
+    seen: set[Path] = set()
     for nb in notebooks:
         resolved = nb.resolve()
         if resolved not in seen:
@@ -324,6 +383,52 @@ def discover_by_phase(repo_root: Path, phase: str, method: str = "all", trace: s
     if phase == "all":
         return discover_all_notebooks(repo_root, method=method, trace=trace)
     raise ValueError(f"Unsupported phase: {phase}")
+
+
+def filter_notebooks_by_selector(
+    repo_root: Path,
+    notebooks: Sequence[Path],
+    selectors: Sequence[str],
+) -> List[Path]:
+    """Filter discovered notebooks by filename, partial path, or full path."""
+    if not selectors:
+        return list(notebooks)
+
+    selected: List[Path] = []
+    seen: set[Path] = set()
+
+    candidates: List[str] = []
+    if len(selectors) > 1:
+        # Supports unquoted multi-word names:
+        # run --phase 2 Features Selection Overview.ipynb
+        candidates.append(" ".join(selectors).strip())
+    candidates.extend(selectors)
+
+    # 1) Direct path matches
+    for cand in candidates:
+        p = Path(cand)
+        for dp in (p, repo_root / p):
+            if dp.exists() and dp.suffix.lower() == ".ipynb":
+                rp = dp.resolve()
+                if rp not in seen:
+                    seen.add(rp)
+                    selected.append(rp)
+
+    # 2) Match against discovered notebook set
+    lowered = [c.lower() for c in candidates if c.strip()]
+    for nb in notebooks:
+        rel = str(nb.relative_to(repo_root)).lower()
+        name = nb.name.lower()
+        if any(token == name or token == rel or token in rel for token in lowered):
+            rp = nb.resolve()
+            if rp not in seen:
+                seen.add(rp)
+                selected.append(rp)
+
+    if not selected:
+        raise ValueError("No notebooks matched selector(s): " + ", ".join(selectors))
+
+    return selected
 
 
 # ------------------------------
@@ -433,9 +538,24 @@ def run_notebooks(
 
     info(f"Total notebooks selected: {len(notebooks)}")
     results: List[RunResult] = []
+    dataset_sources = build_dataset_sources(repo_root)
+    combined_warned = False
 
     for idx, notebook in enumerate(notebooks, start=1):
         rel = notebook.relative_to(repo_root)
+
+        if phase2_notebook_requires_missing_combined(notebook, dataset_sources):
+            if not combined_warned:
+                warn(
+                    "QUT-DV25_Combined_Traces.csv was not found in Phase (i) Data Preparation/QUT-DV25 Dataset "
+                    "or elsewhere in the repository. Skipping Phase (ii) Combined notebooks."
+                )
+                combined_warned = True
+            warn(f"Skipping notebook because combined dataset is missing: {rel}")
+            continue
+
+        stage_dataset_aliases_for_notebook(notebook, dataset_sources)
+
         log("-" * 90)
         info(f"[{idx}/{len(notebooks)}] Executing: {rel}")
         result = execute_notebook(
@@ -511,6 +631,11 @@ def parse_args() -> argparse.Namespace:
         default="execution_summary.json",
         help="Path to JSON summary file, relative to repo root unless absolute."
     )
+    run_parser.add_argument(
+        "notebook",
+        nargs="*",
+        help="Optional notebook selector(s): filename, partial path, or full path.",
+    )
 
     return parser.parse_args()
 
@@ -555,10 +680,19 @@ def main() -> int:
 
         notebooks = discover_by_phase(repo_root, phase=args.phase, method=method, trace=trace)
 
+        try:
+            notebooks = filter_notebooks_by_selector(repo_root, notebooks, args.notebook)
+        except ValueError as exc:
+            err(str(exc))
+            return 2
+
         if args.dry_run:
             info(f"Discovered {len(notebooks)} notebook(s):")
             for nb in notebooks:
-                print(nb.relative_to(repo_root))
+                try:
+                    print(nb.relative_to(repo_root))
+                except ValueError:
+                    print(nb)
             return 0
 
         executed_root = None if args.in_place else (repo_root / args.executed_dir).resolve()
