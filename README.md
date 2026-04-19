@@ -217,7 +217,7 @@ The analysis and experimental evaluation of **eDySec** were conducted in a contr
 
 This repository includes `edysec_runner.py`, a Python utility to help you **check the project structure**, **set up the environment**, and **run all Jupyter notebooks (`.ipynb`)** across folders and subfolders in the correct order.
 
-To run this project in **GitHub Codespaces / GitHub Dev**, open the repository in GitHub Dev by replacing `.com` with `.dev` in the URL: https://github.dev/tanzirmehedi/eDySec/
+To run this project in **GitHub Codespaces / GitHub Dev**, open the repository in GitHub Dev by replacing `.com` with `.dev` in the URL: https://github.dev/****/eDySec/
 
 Once the environment is opened, launch the terminal and run the required setup and execution commands provided in the project.
 
@@ -517,7 +517,7 @@ After execution, check:
 ### Option 1: pip
 
 ```bash
-git clone https://github.com/tanzirmehedi/eDySec.git
+git clone https://github.com/****/eDySec.git
 cd eDySec
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
