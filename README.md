@@ -489,11 +489,16 @@ This configuration is also used in the explainability phase.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-## How to Run the Project (using edysec_runner.py)
+## How to Run the Project in GitHub Dev Environment or Local PC (using edysec_runner.py)
 
 This repository includes `edysec_runner.py`, a Python utility to help you **check the project structure**, **set up the environment**, and **run all Jupyter notebooks (`.ipynb`)** across folders and subfolders in the correct order.
 
-It is designed for only the eDySec project.
+To run this project in **GitHub Codespaces / GitHub Dev**, open the repository in GitHub Dev by replacing `.com` with `.dev` in the URL: https://github.dev/tanzirmehedi/eDySec/
+
+Once the environment is opened, launch the terminal and run the required setup and execution commands provided in the project.
+
+###  Important Note
+Before executing the pipeline, please ensure that all **dataset paths and locations** are correctly configured according to your environment. Incorrect dataset paths may result in runtime errors or missing data issues.
 
 ---
 
@@ -638,6 +643,12 @@ python edysec_runner.py run --phase all --method FLAML
 
 ```bash
 python edysec_runner.py run --phase 3 --method FLAML --trace Pattern
+```
+
+#### Run only FLAML SysCall CNN notebooks
+
+```bash
+python edysec_runner.py run --phase 3 --method FLAML --trace SysCall "SysCall_FLAML_CNN.ipynb"
 ```
 
 #### Overwrite the original notebooks
