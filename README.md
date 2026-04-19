@@ -622,10 +622,10 @@ This performs a dry run without executing notebooks.
 python edysec_runner.py run --dry-run
 ```
 
-#### Run only Phase 1
+#### Run only specific script within a Phase
 
 ```bash
-python edysec_runner.py run --phase 1
+python edysec_runner.py run --phase 2 --method PSO --trace SysCall --continue-on-error
 ```
 
 #### Run only FLAML notebooks
