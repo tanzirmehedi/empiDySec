@@ -513,9 +513,74 @@ The script supports the following tasks:
 
 ---
 
-### Main Commands
+### Main Commands (Ubuntu)
 
-#### 1. Check the repository structure
+#### 1. Install system dependencies
+
+```bash
+sudo apt update
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
+libffi-dev liblzma-dev
+```
+
+#### 2. Install pyenv
+
+```bash
+curl https://pyenv.run | bash
+```
+Add pyenv to your shell:
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+```
+Apply changes:
+
+```bash
+source ~/.bashrc
+```
+
+#### 3. Install Python 3.10.20
+
+```bash
+pyenv install 3.10.20
+```
+
+#### 4. Set project Python version
+
+```bash
+cd /workspaces/eDySec
+pyenv local 3.10.20
+python --version   # should show Python 3.10.20
+```
+
+#### 5. Create virtual environment
+
+```bash
+python -m venv eDySec
+```
+Activate it:
+
+```bash
+source /workspaces/eDySec/eDySec/bin/activate
+```
+Verify:
+
+```bash
+python --version
+```
+
+#### 6. Install required Python packages
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install nbformat nbclient jupyter ipykernel
+```
+
+#### 7. Check the repository structure
 
 Use this first to verify that the expected folders and files are present.
 
@@ -523,7 +588,7 @@ Use this first to verify that the expected folders and files are present.
 python edysec_runner.py check
 ```
 
-#### 2. Set up the environment
+#### 8. Set up the environment
 
 This installs the required Python packages from `requirements.txt`.
 
@@ -531,7 +596,13 @@ This installs the required Python packages from `requirements.txt`.
 python edysec_runner.py setup
 ```
 
-#### 3. Run the full workflow
+#### 9. Run the full workflow
+
+Run only Phase 2
+
+```bash
+python edysec_runner.py run --phase 2
+```
 
 This runs all notebooks across all phases.
 
@@ -551,7 +622,7 @@ This performs a dry run without executing notebooks.
 python edysec_runner.py run --dry-run
 ```
 
-#### Run only Phase 2
+#### Run only Phase 1
 
 ```bash
 python edysec_runner.py run --phase 1
