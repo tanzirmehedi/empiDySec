@@ -1,10 +1,10 @@
 ### A Deep Learning-based Explainable Dynamic Analysis Framework for Detecting Malicious Packages in the PyPI Ecosystem
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python"> <img src="https://img.shields.io/badge/Focus-PyPI%20Malware%20Detection-critical.svg" alt="Focus"> <img src="https://img.shields.io/badge/Analysis-DL%20Based%20Dynamic%20Behavioral-orange.svg" alt="Analysis"> <img src="https://img.shields.io/badge/Stability-Statistical-purple.svg" alt="Stability"> <img src="https://img.shields.io/badge/XAI-SHAP%20%7C%20LIME-purple.svg" alt="XAI">
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## Overview
 
@@ -20,7 +20,7 @@ eDySec is an efficient, stable, and explainable DL-based dynamic analysis framew
 </p>
 <p align="center"><b>Figure 1: Proposed eDySec framework for detecting malicious PyPI packages.</b></p>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## Dataset Overview
 
@@ -58,7 +58,7 @@ eDySec analyzes six core trace categories, plus a combined representation:
 | **Pattern**   | Behavioral pattern representations extracted from execution artifacts |
 | **Combined**  | Joint representation built from all trace categories                  |
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## Running Prerequisites
 
@@ -99,7 +99,7 @@ The analysis and experimental evaluation of **eDySec** were conducted in a contr
 - **TensorFlow Built with CUDA:** Yes
 - **GPU Available:** Yes
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## Repository Structure
 
@@ -211,13 +211,13 @@ The analysis and experimental evaluation of **eDySec** were conducted in a contr
 }
 ```
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## How to Run the Project in GitHub Dev Env
 
 This repository includes `edysec_runner.py`, a Python utility to help you **check the project structure**, **set up the environment**, and **run all Jupyter notebooks (`.ipynb`)** across folders and subfolders in the correct order.
 
-To run this project in **GitHub Codespaces / GitHub Dev**, open the repository in GitHub Dev by replacing `.com` with `.dev` in the URL: https://github.dev/tanzirmehedi/eDySec/
+To run this project in **GitHub Codespaces / GitHub Dev**, open the repository in GitHub Dev by replacing `.com` with `.dev` in the URL: https://github.dev/****/eDySec/
 
 Once the environment is opened, launch the terminal and run the required setup and execution commands provided in the project.
 
@@ -509,7 +509,7 @@ After execution, check:
 - `execution_summary.json` for run status and summary information
 
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
   
 ## How to Run the Project (Local PC)
@@ -517,7 +517,7 @@ After execution, check:
 ### Option 1: pip
 
 ```bash
-git clone https://github.com/tanzirmehedi/eDySec.git
+git clone https://github.com/****/eDySec.git
 cd eDySec
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
@@ -785,7 +785,7 @@ The strongest reported configuration in this repository is:
 
 This configuration is also used in the explainability phase.
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## Note on Model Naming Consistency
 
@@ -794,7 +794,7 @@ Due to a typographical inconsistency, the name MCDCNN may appear in parts of the
 
 Please note that MCDCNN is a typo and refers to the same MDCNN model used throughout the paper. All results labeled as MCDCNN should be interpreted as MDCNN.
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## Citation
 
@@ -805,7 +805,7 @@ Please note that MCDCNN is a typo and refers to the same MDCNN model used throug
   year    = {will be added}
 }
 ```
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+---
 
 ## License
 
