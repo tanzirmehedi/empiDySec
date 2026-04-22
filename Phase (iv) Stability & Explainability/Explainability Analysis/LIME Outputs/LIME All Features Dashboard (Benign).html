@@ -1,0 +1,35 @@
+<html><head><meta charset='utf-8'><title>LIME All Features Explanation</title>
+
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; }
+table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+th { background: #f4f4f4; }
+.pos { color: crimson; font-weight: bold; }
+.neg { color: royalblue; font-weight: bold; }
+</style>
+
+</head><body>
+<h1>LIME All Features Explanation</h1>
+<p><b>Benign probability:</b> 1.000000</p>
+<p><b>Malicious probability:</b> 0.000000</p>
+<table>
+<tr><th>#</th><th>Features</th><th>Contribution</th></tr>
+<tr><td>1</td><td>Read_Processes</td><td class='neg'>-2.032055</td></tr>
+<tr><td>2</td><td>Pattern_9</td><td class='neg'>-1.290948</td></tr>
+<tr><td>3</td><td>Process_Operations</td><td class='neg'>-1.133596</td></tr>
+<tr><td>4</td><td>Pattern_6</td><td class='neg'>-0.613325</td></tr>
+<tr><td>5</td><td>Pattern_5</td><td class='neg'>-0.449543</td></tr>
+<tr><td>6</td><td>IO_Operations</td><td class='neg'>-0.417832</td></tr>
+<tr><td>7</td><td>Pattern_4</td><td class='neg'>-0.329559</td></tr>
+<tr><td>8</td><td>Pattern_2</td><td class='neg'>-0.320187</td></tr>
+<tr><td>9</td><td>Security_Operations</td><td class='neg'>-0.276454</td></tr>
+<tr><td>10</td><td>Home_DIR_Access</td><td class='neg'>-0.098413</td></tr>
+<tr><td>11</td><td>Network_Operations</td><td class='neg'>-0.071356</td></tr>
+<tr><td>12</td><td>Root_DIR_Access</td><td class='pos'>+0.007025</td></tr>
+<tr><td>13</td><td>Remote_IPs_Access</td><td class='pos'>+0.012097</td></tr>
+<tr><td>14</td><td>Total_Dependencies</td><td class='pos'>+0.073495</td></tr>
+<tr><td>15</td><td>File_Operations</td><td class='pos'>+0.171039</td></tr>
+<tr><td>16</td><td>State_Transition</td><td class='pos'>+1.570799</td></tr>
+<tr><td>17</td><td>Pattern_10</td><td class='pos'>+2.624622</td></tr>
+</table></body></html>
