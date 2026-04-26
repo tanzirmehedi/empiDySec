@@ -36,8 +36,8 @@ except ImportError as exc:  # pragma: no cover
 
 
 PHASE1_NOTEBOOKS = [
-    "Phase (i) Data Preparation/Dataset Overview.ipynb",
-    "Phase (i) Data Preparation/t-SNE Implementation.ipynb",
+    "Phase (i) Data Preparation/Dataset_Overview.ipynb",
+    "Phase (i) Data Preparation/t-SNE_Implementation.ipynb",
 ]
 
 PHASE2_PRIORITY = [
@@ -45,8 +45,8 @@ PHASE2_PRIORITY = [
 ]
 
 PHASE4_PRIORITY = [
-    "Phase (iv) Stability & Explainability/Explainability Analysis/FLAML DL MLP Combined XAI.ipynb",
-    "Phase (iv) Stability & Explainability/Stability Analysis/Stability Analysis.ipynb",
+    "Phase (iv) Stability and Explainability/Explainability Analysis/FLAML_MLP_Combined_XAI.ipynb",
+    "Phase (iv) Stability and Explainability/Stability Analysis/Stability_Analysis.ipynb",
 ]
 
 FEATURE_METHODS = ["ANOVA", "CORR", "FLAML", "PSO", "WOA"]
@@ -225,8 +225,8 @@ def validate_repo_structure(repo_root: Path) -> bool:
     required_dirs = [
         repo_root / "Phase (i) Data Preparation",
         repo_root / "Phase (ii) Feature Selection",
-        repo_root / "Phase (iii) DL Model Selection & Evaluation",
-        repo_root / "Phase (iv) Stability & Explainability",
+        repo_root / "Phase (iii) Model Selection and Evaluation",
+        repo_root / "Phase (iv) Stability and Explainability",
     ]
 
     ok = True
@@ -354,7 +354,7 @@ def discover_phase2_notebooks(repo_root: Path, method: str = "all") -> List[Path
 
 
 def discover_phase3_notebooks(repo_root: Path, method: str = "all", trace: str = "all") -> List[Path]:
-    base = repo_root / "Phase (iii) DL Model Selection & Evaluation"
+    base = repo_root / "Phase (iii) Model Selection and Evaluation"
     if not base.exists():
         return []
 
@@ -384,7 +384,7 @@ def discover_phase3_notebooks(repo_root: Path, method: str = "all", trace: str =
 def discover_phase4_notebooks(repo_root: Path) -> List[Path]:
     priority = collect_existing_paths(repo_root, PHASE4_PRIORITY)
     seen = {p.resolve() for p in priority}
-    base = repo_root / "Phase (iv) Stability & Explainability"
+    base = repo_root / "Phase (iv) Stability and Explainability"
     others: List[Path] = []
     if base.exists():
         for path in sorted(base.rglob("*.ipynb")):
