@@ -325,7 +325,21 @@ This installs the required Python packages from `requirements.txt`.
 python edysec_runner.py setup
 ```
 
-#### 9. Run the full workflow
+#### 9. Only list what will run
+
+This performs a dry run without executing notebooks.
+
+```bash
+python edysec_runner.py run --dry-run
+```
+
+#### 10. Run only specific script within Phase 2
+
+```bash
+python edysec_runner.py run --phase 2 --method PSO --trace SysCall
+```
+
+#### 11. Run the full workflow (will run 387 notebooks)
 
 Run only Phase 2
 
@@ -342,20 +356,6 @@ python edysec_runner.py run --phase all --continue-on-error
 ---
 
 ### Useful Examples
-
-#### Only list what will run
-
-This performs a dry run without executing notebooks.
-
-```bash
-python edysec_runner.py run --dry-run
-```
-
-#### Run only specific script within a Phase
-
-```bash
-python edysec_runner.py run --phase 2 --method PSO --trace SysCall
-```
 
 #### Run only FLAML notebooks
 
@@ -784,6 +784,24 @@ The strongest reported configuration in this repository is:
 * **MLP model**
 
 This configuration is also used in the explainability phase.
+
+---
+
+## Reproducibility Note
+
+Due to differences in hardware (e.g., GPU model, CUDA version, CPU architecture, libraries), the script outputs may vary slightly across systems.  
+
+Observed variation is typically small (within **0 ~ 1.25** difference at most) and does not affect overall conclusions.
+
+These differences are expected due to:
+- Floating‑point precision variations  
+- Non‑deterministic GPU operations  
+- Backend/library implementation differences  
+
+For best reproducibility, please ensure matching:
+- Python version  
+- CUDA/cuDNN versions  
+- Library dependencies (see `requirements.txt`)  
 
 ---
 
