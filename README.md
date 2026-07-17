@@ -1,4 +1,4 @@
-### A Deep Learning-based Explainable Dynamic Analysis Framework for Detecting Malicious Packages in the PyPI Ecosystem
+### An Empirical Study of Deep Learning for Dynamic Behavioral Detection of Malicious Software Packages
 
 ---
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-eDySec is an efficient, stable, and explainable DL-based dynamic analysis framework for detecting malicious packages. It is designed to address the high-dimensional, sparse, and heterogeneous nature of dynamic behavioral data. As illustrated in Figure, eDySec consists of four main phases: 
+Empirical Dynamic Security (eDySec) is an efficient, stable, and explainable deep learning (DL)-based empirical dynamic analysis approach for detecting malicious software packages using the QUT-DV25 dataset. It is designed to address the challenges associated with high-dimensional, sparse, and heterogeneous dynamic behavioral data. As illustrated in Figure~\ref{fig:framework}, the empirical study consists of four main phases:
 
 - Data Preparation    
 - Feature Selection    
