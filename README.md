@@ -1,6 +1,6 @@
 # An Empirical Study of Deep Learning for Dynamic Behavioral Detection of Malicious Software Packages
 
-**Replication Package — empiDySec (Empirical Dynamic Security)**
+**Replication Package - empiDySec (Empirical Dynamic Security)**
 
 ---
 
@@ -12,12 +12,12 @@
 
 This repository contains the complete replication package for our empirical study on deep learning (DL)-based **dynamic behavioral detection of malicious software packages** in the PyPI ecosystem. The study systematically investigates how feature selection strategies, DL architectures, trace categories, model stability, and explainability interact when detecting malicious packages from high-dimensional, sparse, and heterogeneous dynamic behavioral data.
 
-The study is operationalized through **empiDySec** — an efficient, stable, and explainable DL-based empirical dynamic analysis approach evaluated on the **QUT-DV25** dataset. As illustrated in Figure 1, the empirical study is structured into four sequential phases:
+The study is operationalized through **empiDySec** - an efficient, stable, and explainable DL-based empirical dynamic analysis approach evaluated on the **QUT-DV25** dataset. As illustrated in Figure 1, the empirical study is structured into four sequential phases:
 
-1. **Data Preparation** — dataset characterization and visualization
-2. **Feature Selection** — comparative evaluation of five selection strategies
-3. **Model Selection and Evaluation** — benchmarking of ten DL architectures
-4. **Stability and Explainability Analysis** — statistical robustness testing and XAI interpretation
+1. **Data Preparation** - dataset characterization and visualization
+2. **Feature Selection** - comparative evaluation of five selection strategies
+3. **Model Selection and Evaluation** - benchmarking of ten DL architectures
+4. **Stability and Explainability Analysis** - statistical robustness testing and XAI interpretation
 
 <p align="center">
   <img src="Images/framework.jpg" alt="empiDySec Study Workflow" width="60%">
@@ -478,10 +478,10 @@ Do not move dataset files unless you also update the notebook paths.
 
 ### 7.9 Troubleshooting
 
-1. **`requirements.txt` not found** — make sure you are running the script from the repository root.
-2. **Notebook path errors** — this usually happens when dataset folders or relative paths are missing or changed.
-3. **Some notebooks fail but others should continue** — use `python empidysec_runner.py run --phase all --continue-on-error`.
-4. **You only want to preview the execution plan** — use `python empidysec_runner.py run --dry-run`.
+1. **`requirements.txt` not found** - make sure you are running the script from the repository root.
+2. **Notebook path errors** - this usually happens when dataset folders or relative paths are missing or changed.
+3. **Some notebooks fail but others should continue** - use `python empidysec_runner.py run --phase all --continue-on-error`.
+4. **You only want to preview the execution plan** - use `python empidysec_runner.py run --dry-run`.
 
 ### 7.10 Example Workflow
 
