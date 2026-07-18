@@ -30,13 +30,11 @@ The study is operationalized through **empiDySec** - an efficient, stable, and e
 
 The empirical study is designed around the following research questions:
 
-- **RQ1 (Data Characterization):** What are the structural and distributional characteristics of dynamic behavioral traces collected from benign and malicious PyPI packages, and how separable are the classes across dynamic, metadata, and static perspectives?
-- **RQ2 (Feature Selection):** How do different feature selection methods (ANOVA, CORR, FLAML, PSO, WOA) affect the quality of feature subsets derived from each trace category and their combined representation?
-- **RQ3 (Model Effectiveness):** Which DL architectures (classical, recurrent, and attention-based) achieve the strongest detection performance across trace categories and feature-selection methods?
-- **RQ4 (Stability):** How stable are model rankings across repeated evaluations, and are observed performance differences statistically significant (Friedman and Nemenyi post-hoc analysis)?
-- **RQ5 (Explainability):** Which behavioral features drive the predictions of the best-performing configuration, as revealed by SHAP and LIME analysis?
-
-Each research question maps directly to one phase of the repository (RQ1 → Phase i, RQ2 → Phase ii, RQ3 → Phase iii, RQ4–RQ5 → Phase iv).
+    - RQ1: Which feature sets lead to the best performance?
+    - RQ2: How do DL models compare to ML models?
+    - RQ3: Can DL models detect evasive attacks?
+    - RQ4: How do DL models ensure stability?
+    - RQ5: Can XAI provide meaningful interpretations? 
 
 ---
 
