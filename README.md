@@ -1,6 +1,6 @@
 ### An Empirical Study of Deep Learning for Dynamic Behavioral Detection of Malicious Software Packages
 
-### Replication Package — eDySec (Empirical Dynamic Security)
+### Replication Package - eDySec (Empirical Dynamic Security)
 
 ---
 
