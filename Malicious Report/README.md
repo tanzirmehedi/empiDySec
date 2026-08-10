@@ -53,13 +53,13 @@ Static inspection of the archives explains the origin of each dynamic signal in 
 | discord_command | Exported `log()` function invoked by a separately distributed script | Network I/O to a hard-coded webhook after installation |
 | vermillion | 33 MB Windows binary shipped as package data; entry point references a nonexistent module | File I/O and binary drop; no autonomous execution |
 
-Two cases warrant care when interpreting traces. `CyberOsint` contains no installation hook, so its install-time signal reflects ordinary dependency resolution and build subprocesses; the behaviour of interest occurs later, when the `cyberosint` entry point is invoked. `vermillion` executes nothing on its own — its installed console script targets `vermillion.bot:main`, a module absent from the distribution — so the dropped binary is the only evidence available, and attribution of its behaviour requires analysis outside the package lifecycle.
+Two cases warrant care when interpreting traces. `CyberOsint` contains no installation hook, so its install-time signal reflects ordinary dependency resolution and build subprocesses; the behaviour of interest occurs later, when the `cyberosint` entry point is invoked. `vermillion` executes nothing on its own - its installed console script targets `vermillion.bot:main`, a module absent from the distribution - so the dropped binary is the only evidence available, and attribution of its behaviour requires analysis outside the package lifecycle.
 
 ---
 
 ## 4. Per-package findings
 
-### CyberOsint 0.4 — functional OSINT tooling (dual-use)
+### CyberOsint 0.4 - functional OSINT tooling (dual-use)
 
 Not a backdoor. The package delivers the capability it advertises, and the party at risk is the person being searched rather than the person installing it.
 
@@ -67,7 +67,7 @@ Nothing executes at install time; all behaviour is reached through the `cyberosi
 
 **Observed signal:** process spawn and network I/O at install time from dependency acquisition, followed by outbound HTTPS to a breach-aggregation API once the entry point is invoked.
 
-### discord_command 0.0.2 — Discord token exfiltration helper
+### discord_command 0.0.2 - Discord token exfiltration helper
 
 Steals a user's Discord login token and sends it to an attacker, potentially allowing unauthorized access to the victim's account.
 
@@ -75,7 +75,7 @@ The package does not locate the token itself during installation. Its `log(token
 
 **Observed signal:** post-installation network I/O to the hard-coded webhook, produced only when the companion script drives the exported function; the distribution alone yields a clean trace.
 
-### eth-abcde 0.2.3 — private key exfiltration via typosquat
+### eth-abcde 0.2.3 - private key exfiltration via typosquat
 
 Steals a user's Ethereum private key and transmits it to an attacker, who can then drain any funds the key controls.
 
@@ -85,7 +85,7 @@ Metadata is internally inconsistent and useful as a signal: the sdist directory 
 
 **Observed signal:** a state transition on the one-shot guard flag, followed by a single outbound GET to a non-project domain, with key material in the URL path, emitted from within a signing call.
 
-### infoind 3897 — multi-layer obfuscated loader
+### infoind 3897 - multi-layer obfuscated loader
 
 Flagged for concealment rather than for the payload it carries. The module conceals its real code behind nested encryption and executes it automatically on import.
 
@@ -93,25 +93,25 @@ Each layer embeds an AES-CBC ciphertext and recovers the key by hashing successi
 
 The decrypted payload is benign in effect. The security concern is structural: the same loader delivers arbitrary code, the brute-forced key defeats signature matching on the key itself, and source review cannot inspect what will run. Catalogued as **MAL-2024-11615** in the OSSF malicious-packages dataset.
 
-**Observed signal:** obfuscated dynamic execution — `exec()` of decrypted content at import, followed by subprocess invocation of `pip3` and outbound requests to a search engine.
+**Observed signal:** obfuscated dynamic execution - `exec()` of decrypted content at import, followed by subprocess invocation of `pip3` and outbound requests to a search engine.
 
-### Pytonlib 0.0.0 — install-time staged downloader
+### Pytonlib 0.0.0 - install-time staged downloader
 
 Downloads and executes attacker-controlled code on Windows hosts during installation, granting arbitrary code execution as the installing user.
 
 The package overrides setuptools' `install` command with a randomly named `cmdclass` entry, so the payload runs during `pip install`, before the victim imports anything. The override gates on Windows, decrypts an embedded Fernet blob, and executes the result; that stage retrieves further code from `funcaptcha.ru/paste2?package=pytyon` and executes it in turn. The final payload is chosen by the attacker at request time and is not recoverable from the archive.
 
-The package contains no other code and no cover story — its summary and description are random character strings. It exists solely to exploit PyPI name normalisation against the legitimate `pytonlib` TON blockchain client (a real project, currently at 0.0.72, whose release history begins at 0.0.1 on 2022-04-26). Download totals recorded under this name should therefore be treated cautiously, since the normalised name is shared with the legitimate project.
+The package contains no other code and no cover story - its summary and description are random character strings. It exists solely to exploit PyPI name normalisation against the legitimate `pytonlib` TON blockchain client (a real project, currently at 0.0.72, whose release history begins at 0.0.1 on 2022-04-26). Download totals recorded under this name should therefore be treated cautiously, since the normalised name is shared with the legitimate project.
 
-**Observed signal:** the clearest of the six — installation-process activity during `pip install`, a remote fetch to an unrelated domain, and execution of the response.
+**Observed signal:** the clearest of the six - installation-process activity during `pip install`, a remote fetch to an unrelated domain, and execution of the response.
 
-### vermillion 0.5 — Binary dropper
+### vermillion 0.5 - Binary dropper
 
 Delivers a 33 MB Windows executable to the victim's machine inside a Python distribution that contains no functionality of its own.
 
 Nothing executes during installation. The declared console-script entry point targets `vermillion.bot:main`, but the package directory holds only an empty `__init__.py` and `bot.exe`, so the installed command is broken and the binary must be launched by the user or by a follow-up stage. The binary is a stripped PE32 GUI executable with indications of packing and no PyInstaller, .NET or Nuitka markers; it was not detonated in this study, so its behaviour is not characterised here. The declared dependencies (`discord`, `discord_webhook`) and the Windows-only classifier are consistent with Discord-based command and control, but this is inference from packaging rather than from the binary. The README states only "Under construction! Not ready for use yet!"
 
-**Observed signal:** file I/O and binary drop at installation, with no autonomous execution; behaviour is observable only once the user runs the binary. Detection otherwise rests on packaging anomalies — a large opaque binary shipped as package data, zero Python logic, and an entry point pointing at a nonexistent module.
+**Observed signal:** file I/O and binary drop at installation, with no autonomous execution; behaviour is observable only once the user runs the binary. Detection otherwise rests on packaging anomalies - a large opaque binary shipped as package data, zero Python logic, and an entry point pointing at a nonexistent module.
 
 ---
 
