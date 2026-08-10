@@ -18,11 +18,13 @@ The study is operationalized through **empiDySec** - an efficient, stable, and e
 2. **Feature Selection** - comparative evaluation of five selection strategies
 3. **Model Selection and Evaluation** - benchmarking of ten DL architectures
 4. **Stability and Explainability Analysis** - statistical robustness testing and XAI interpretation
+5. **Baseline Comparison** - compare with the ML baseline
+6. **Adversarial Attack and Training** - adversarial attack and training 
 
 <p align="center">
-  <img src="Images/framework.jpg" alt="empiDySec Study Workflow" width="60%">
+  <img src="Images/threat_model.drawio.png" alt="Threat Model" width="60%">
 </p>
-<p align="center"><b>Figure 1: Workflow of the empiDySec empirical study for detecting malicious PyPI packages.</b></p>
+<p align="center"><b>Figure 1: System and threat model. Red denotes adversarial entities and actions.</b></p>
 
 ---
 
