@@ -1,4 +1,4 @@
-# Phase (v): Adversarial Attack and Training
+# Phase (vi): Adversarial Attack and Training
 
 This directory contains the notebooks used to evaluate adversarial attacks and adversarial training across three import-padding strategies and six padding budgets.
 
