@@ -1,14 +1,12 @@
 # Removed Malicious PyPI Packages - Case Analysis
 
-This directory documents six verified malicious PyPI packages that carried benign benchmark labels and have since been removed from the index. For each package we record the distribution metadata, the point in the package lifecycle at which attacker-controlled code executes, and the dominant behavioural channel through which that execution becomes observable. The lifecycle stage is central to this study: a sandbox restricted to `pip install` observes a different subset of these samples than one that also imports the package or exercises its entry point, and no single collection point covers all six.
-
-Behavioural findings are drawn from the execution traces collected in this study.
+This directory documents six verified malicious PyPI packages previously labeled benign and later removed from PyPI following our disclosure. For each package, we summarize its metadata, malicious-code execution stage, and observable behavioral channel. These cases show that pip install-only analysis is insufficient, as malicious behavior may emerge during installation, import, or post-installation execution.
 
 ---
 
 ## 1. Package inventory
 
-**Table 1.** Distribution metadata for the six packages, all since removed from the index.
+**Table 1.** Distribution metadata for the six packages, all since removed from the PyPI index.
 
 | Package | Version | Total downloads | Last update | Platform | Distribution |
 |---|---|---|---|---|---|
