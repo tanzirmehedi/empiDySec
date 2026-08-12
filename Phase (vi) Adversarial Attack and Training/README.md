@@ -1,5 +1,10 @@
 # Phase (vi): Adversarial Attack and Training
 
+<p align="center">
+  <img src="Images/Adversarial Training Process.png" alt="Adversarial Training Process" width="60%">
+</p>
+<p align="center"><b>Figure 1: Adversarial Training Process.</b></p>
+
 This directory contains the notebooks used to evaluate adversarial attacks and adversarial training across three import-padding strategies and six padding budgets.
 
 ## Experimental Design
