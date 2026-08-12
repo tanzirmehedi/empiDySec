@@ -1,7 +1,7 @@
 # Phase (vi): Adversarial Attack and Training
 
 <p align="center">
-  <img src=".../Images/Adversarial Training Process.png" alt="Adversarial Training Process" width="60%">
+  <img src="../../Images/adversarial_training_process.png" alt="Adversarial Training Process" width="60%">
 </p>
 <p align="center"><b>Figure 1: Adversarial Training Process.</b></p>
 
