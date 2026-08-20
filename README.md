@@ -51,11 +51,6 @@ The paper addresses four research questions:
 
 QUT-DV25 is a labeled dynamic-behavior dataset for malicious-package detection in the PyPI ecosystem.
 
-<p align="left">
-  <img src="Images/dataset_overview.jpg" alt="QUT-DV25 dataset overview" width="65%">
-</p>
-<p align="left"><b>Figure 2. QUT-DV25 dataset overview and class distribution.</b></p>
-
 | Property | Value |
 | --- | --- |
 | Dataset | QUT-DV25 |
