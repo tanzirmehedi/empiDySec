@@ -1,0 +1,14 @@
+﻿Risk Tier,High-Risk Category,Unique_Package_Names,Version_Records
+Tier 1 - Sandbox / runtime anomaly,Freeze,17,18
+Tier 1 - Sandbox / runtime anomaly,Infinity waiting,3,4
+Tier 1 - Sandbox / runtime anomaly,Version loop,3,3
+Tier 1 - Sandbox / runtime anomaly,Shutdown PC,1,1
+Tier 2 - Corrupt or malformed artifact,Not a gzip file problem,5,5
+Tier 2 - Corrupt or malformed artifact,Compressed file ended before the end,1,1
+Tier 2 - Corrupt or malformed artifact,File name problem,1,1
+Tier 2 - Corrupt or malformed artifact,ReadError: empty file,1,1
+Tier 3 - Install-process failure,Legacy-install-failure,7,7
+Tier 3 - Install-process failure,No module named problem,7,23
+Tier 4 - Dependency resolution failure,Matching distribution found problem,47,73
+Tier 4 - Dependency resolution failure,Not find a version that satisfies problem,5,5
+Tier 5 - Environment constraint failure,Requires a different Python problem,9,13

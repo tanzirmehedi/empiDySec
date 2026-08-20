@@ -1,0 +1,10 @@
+﻿Metric,Count,Meaning
+Rows in source sheet,7126.0,All package-version rows in the workbook.
+Unique package names in sheet,6088.0,Distinct names in the full corpus.
+Cohort 1 names excluded,107.0,"High-risk installation-failure packages, removed."
+Eligible pool,1704.0,"Successfully installed (Python 3.12 only), cohort 1 removed."
+Target cohort size,248.0,Requested size of cohort 2.
+Selected package names,248.0,"Final cohort, one representative record per name."
+Sampling fraction of pool (%),14.55,Share of the eligible pool that was drawn.
+Installed version records in cohort,298.0,All installed versions of the selected packages.
+Overlap with cohort 1,0.0,Verified disjoint by assertion.

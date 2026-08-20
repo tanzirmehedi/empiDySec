@@ -1,0 +1,7 @@
+﻿Metric,Count,Meaning
+Rows in source sheet,7126,All package-version rows in the workbook.
+Rows matching any risk category,263,Rows matching at least one configured pattern.
+Unique package names available,214,Distinct names across all five risk tiers.
+Target unique package names,107,Requested size of the adversarial-attack set.
+Unique package names selected,107,"Final set, one representative record per name."
+Version records for selected names,155,All matching versions of the selected packages.

@@ -1,0 +1,6 @@
+﻿Risk Tier,Unique Names Available,Unique Names Taken,Cumulative Selected,Selection Note
+Tier 1 - Sandbox / runtime anomaly,24,24,24,Tier taken in full
+Tier 2 - Corrupt or malformed artifact,8,8,32,Tier taken in full
+Tier 3 - Install-process failure,14,14,46,Tier taken in full
+Tier 4 - Dependency resolution failure,52,52,98,Tier taken in full
+Tier 5 - Environment constraint failure,116,9,107,"Tier partially taken to meet the target: ranked by version-record count (descending), then package name"

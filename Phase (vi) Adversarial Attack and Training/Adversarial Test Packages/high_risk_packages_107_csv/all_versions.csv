@@ -1,0 +1,156 @@
+﻿Package Name,Package Version,Risk Tier,High-Risk Category,Matched Evidence,Source Excel Row
+282828282828282828,0.0.0,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,23
+Distutil,1.0,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,1184
+DoNotDownload,0.0.0,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,1201
+advpruebitaa3,1.0.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,67
+ai-solver-py,1.0,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,146
+aiotoolsbox,1.4.5,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,140
+aowdjpawojd,0.0.0,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,202
+aptx,0.2,Tier 1 - Sandbox / runtime anomaly,Infinity waiting,Remarks: infinity waiting,217
+asyncio-box,1.4.6,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,260
+axelo,0.0.0,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,285
+bahaha,0.94,Tier 4 - Dependency resolution failure,Not find a version that satisfies problem,Auto Status (Python 3.12): Could not find a version,297
+bignum-devel,1.5.2,Tier 1 - Sandbox / runtime anomaly,Infinity waiting,Remarks: infinity waiting,412
+bloxflipscraper,0.0.0,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,455
+blypack,0.3,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,457
+blypack,0.5,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,458
+bootcampsystem,0.1,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,473
+botaa3,1.0.0,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,476
+code-helper,1.0.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,699
+colorara,0.1,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,758
+colorating,1.0.0,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,760
+colorsapi,6.6.7,Tier 1 - Sandbox / runtime anomaly,Version loop,Remarks: version loop,786
+colourama,0.1.6,Tier 1 - Sandbox / runtime anomaly,Version loop,Remarks: version loop,806
+discord-simple-http,1.7.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1146
+discordwebutil,0.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1161
+discordwebutils,0.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1162
+distrib,0.1,Tier 2 - Corrupt or malformed artifact,Not a gzip file problem,Auto Status (Python 3.12): Not a GZIP File,1183
+dshttpslib,1.7.8,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1230
+dshttpslib,1.7.9,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1231
+dshttpslib,1.8.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1232
+enumerate-iam-aws,1.0.1,Tier 1 - Sandbox / runtime anomaly,Version loop,Remarks: version loop,1305
+eth-keccak,0.1,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,1748
+ethertoollerz,1.0,Tier 4 - Dependency resolution failure,Not find a version that satisfies problem,Auto Status (Python 3.12): Could not find a version,1736
+ethtoolz,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,1756
+fasdghjkhjafsd,0.0.1,Tier 1 - Sandbox / runtime anomaly,Infinity waiting,Remarks: infinity waiting,1783
+fasdghjkhjafsd,0.0.3,Tier 1 - Sandbox / runtime anomaly,Infinity waiting,Remarks: infinity waiting,1784
+gen-agent-fingerprint,0.1,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,1896
+httpacc,0.0.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2079
+httpsreqfast,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2100
+httpsreqfast,1.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2101
+httpsreqfast,1.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2102
+httpsreqfast,1.3,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2103
+httpsreqfast,1.5,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2104
+httpsreqfast,1.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2105
+httpsreqfast,1.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2106
+httpuri,0.0.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2114
+ipboards,9999.0.2,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,2279
+javapatch,0.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2294
+javapatch,0.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2295
+kfactionantiafk,0.0.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2328
+kfactionantiafk,0.0.5,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2329
+lastweb3toolzbro,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2362
+libffm,0.3,Tier 1 - Sandbox / runtime anomaly,Shutdown PC,Remarks: shutdown PC,2441
+logic2,0.1.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2778
+methantiafkxd,0.0.2,Tier 2 - Corrupt or malformed artifact,Compressed file ended before the end,Auto Status (Python 3.12): Compressed file ended,2934
+minecraft-utilities-api,0.3.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2953
+minecraft-utilities-api,0.3.9,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2954
+minecraft-utilities-api,0.4.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2955
+minecraft-utilities-api,0.4.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2956
+minecraftskyblockapi,0.2.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2951
+minecraftskyblockapi,0.2.3,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,2952
+mplatlib,1.0,Tier 4 - Dependency resolution failure,Not find a version that satisfies problem,Auto Status (Python 3.12): Could not find a version,2989
+multiconnection,2.34.19,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3006
+mumpy,0.1,Tier 2 - Corrupt or malformed artifact,Not a gzip file problem,Auto Status (Python 3.12): Not a GZIP File,3025
+myethertoolz,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3040
+myweb3toolz,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3052
+nitro-api66,1.0,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,3086
+nitus,0.1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3087
+oauthapimojang,0.2.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3130
+oxeru3-test,0.1.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3260
+pipstyle,0.1.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3419
+pptest,999.0.16,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3504
+pptest,999.0.17,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3505
+pptest,999.0.18,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3506
+pptest,999.0.19,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3507
+pptest,999.0.20,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3508
+pptest,999.0.21,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3509
+pptest,999.0.22,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3510
+pptest,999.0.23,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3511
+pptest,999.0.24,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3512
+pptest,999.0.26,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3513
+pptest,999.0.25,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3514
+pptest,999.0.12,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3515
+pptest,999.0.13,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3516
+pptest,999.0.14,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3517
+pptest,999.0.15,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3518
+progreessbar2,0.1,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,3542
+prometheus-http-client-shopee,1.0.5,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3562
+pycrypterexe,1.2.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,3895
+pycrypting,1.0.12,Tier 4 - Dependency resolution failure,Not find a version that satisfies problem,Auto Status (Python 3.12): Could not find a version,3905
+pycryptlib,1.1.5,Tier 2 - Corrupt or malformed artifact,Not a gzip file problem,Auto Status (Python 3.12): Not a GZIP File,3907
+pyddosprotect,1.0.0,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,3930
+pygraphql32,1.2.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4039
+pyobfexecute,1.0.0,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,4243
+pyobfexecute,1.0.1,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,4244
+pyobflite,1.0.0,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,4246
+pypaquets,1.0.1,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,4274
+pyportfoliopt,1.5.4,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,4317
+pyportfoliopt,1.5.5,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,4318
+pyportfoliopt,1.5.6,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,4319
+pypswcracker,1.0.0,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,4343
+pyrelmove,0.0.13,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4400
+pysofti,0.0.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4434
+python-splib,1.4.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4587
+python-splib,1.4.3,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4588
+python-splib,1.4.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4589
+pythoncoloring,1.2.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4537
+pytz3-dev,1.0.0,Tier 2 - Corrupt or malformed artifact,Not a gzip file problem,Auto Status (Python 3.12): Not a GZIP File,4657
+reols,0.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4832
+req-tools,0.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,4879
+reqinstaller,1.0.0,Tier 4 - Dependency resolution failure,Not find a version that satisfies problem,Auto Status (Python 3.12): Could not find a version,4861
+requ_sts,0.1.0,Tier 2 - Corrupt or malformed artifact,File name problem,Remarks: name problem,4881
+ressend,0.8,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5051
+ressy,0.8,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5052
+ressyy,0.8,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5053
+reverse_shell,1.1,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,5062
+reverse_shell,1.3,Tier 3 - Install-process failure,No module named problem,Auto Status (Python 3.12): Module Not Found,5063
+robloxpy-advanced,0.1.0,Tier 2 - Corrupt or malformed artifact,ReadError: empty file,Remarks: read error: empty file,5108
+rushbruhmalware,1.0,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,5137
+sagetesteight,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5152
+sagetestfive,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5153
+sagetestfour,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5154
+sagetestseven,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5155
+sagetestsix,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5156
+sagetestthree,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5157
+sagetesttwo,0.39,Tier 3 - Install-process failure,Legacy-install-failure,Auto Status (Python 3.12): Legacy Install Failure,5158
+screencaptned,0.1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5209
+sea-django-mysqlpool,0.4.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5218
+sea-django-mysqlpool,0.4.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5219
+secbg,0.0.5,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5220
+secbg,0.0.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5221
+secbg,0.0.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5222
+secbg,0.0.8,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5223
+semdber,4.12,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,5672
+semurgdb,0.1,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,5673
+skd64,0.3,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,5776
+stillrequestsa,0.0.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5877
+stillrequestsa,0.0.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5878
+supra-style,0.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5949
+supra_style,0.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,5947
+test-async,0.0.5,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6095
+test-async,0.0.6,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6096
+test-async,0.0.7,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6097
+test-async,0.0.3,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6098
+test-async,0.0.4,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6099
+test-async,0.0.8,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6100
+tryquests,0.0.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6607
+uniswap-math,0.4.2,Tier 1 - Sandbox / runtime anomaly,Freeze,Remarks: freeze,6645
+upgini,1.1.100,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,6653
+upgini,1.1.101,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,6654
+upgini,1.1.99,Tier 5 - Environment constraint failure,Requires a different Python problem,Auto Status (Python 3.12): Requires a Different Python,6655
+utilitytools,0.0.2,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6708
+very-hackerman,0.0.1,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6738
+virtualnv,0.1.1,Tier 2 - Corrupt or malformed artifact,Not a gzip file problem,Auto Status (Python 3.12): Not a GZIP File,6745
+web3toolzfor,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6812
+web3txtools,1.0,Tier 4 - Dependency resolution failure,Matching distribution found problem,Auto Status (Python 3.12): No Matching Distribution Found,6813
