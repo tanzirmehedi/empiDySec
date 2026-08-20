@@ -27,7 +27,7 @@ Pytonlib is the textbook case, and it's useful as a baseline. It overrides setup
 
 The name is the whole point: PyPI normalises project names, and `Pytonlib` collides with `pytonlib`, a real and actively maintained TON blockchain client. Anyone typing the wrong capitalisation, or any tool resolving the normalised name, could land here. It also means the download figures under that name are unreliable — the two projects share a namespace.
 
-![Inspector view of Pytonlib's utils/wallet.py, showing base64 wallet-code constants keyed by SHA-256 digest.](figures/Pytonlib_Malicious_Code_jpg.png)
+![Inspector view of Pytonlib's utils/wallet.py, showing base64 wallet-code constants keyed by SHA-256 digest.](Pytonlib_Malicious_Code_jpg.png)
 
 The archive isn't only a payload, either. It carries library code lifted from the real project — here, wallet-version constants and their extractor helpers — which is what makes the collision convincing to anyone who opens the package and skims.
 
