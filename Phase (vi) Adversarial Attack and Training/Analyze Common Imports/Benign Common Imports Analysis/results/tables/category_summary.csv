@@ -1,0 +1,3 @@
+﻿category,distinct_modules,package_module_incidents,raw_occurrences,incident_share_percent
+S: standard library,80,5528,6015,47.30446688345028
+T: third-party/project-local/other,556,6158,7257,52.69553311654972

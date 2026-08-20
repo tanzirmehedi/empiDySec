@@ -1,0 +1,11 @@
+﻿metric,value
+Files visited recursively,6725
+Supported ZIP/TAR archives,6725
+Archives containing setup.py,5532
+Archives with detected imports,5521
+Distinct top-level imports,636
+Standard-library modules observed,80
+Third-party/project-local/other modules observed,556
+Package-module incidents,11686
+Raw import occurrences,13272
+Recorded issues,0

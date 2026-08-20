@@ -1,0 +1,637 @@
+﻿rank,module,category,package_count,package_share_percent,setup_file_count,total_occurrences,mean_occurrences_per_importing_package
+1,setuptools,T: third-party/project-local/other,5077,91.77512653651482,5193,5711,1.124876895804609
+2,os,S: standard library,1652,29.862617498192336,1691,1805,1.0926150121065374
+3,distutils,S: standard library,798,14.425162689804772,826,1002,1.255639097744361
+4,sys,S: standard library,711,12.852494577006508,736,746,1.049226441631505
+5,re,S: standard library,413,7.465654374548084,419,420,1.0169491525423728
+6,codecs,S: standard library,345,6.236442516268981,345,346,1.0028985507246377
+7,pathlib,S: standard library,309,5.585683297180044,311,313,1.0129449838187703
+8,io,S: standard library,239,4.3203181489515545,239,239,1.0
+9,subprocess,S: standard library,161,2.9103398409255243,165,171,1.062111801242236
+10,shutil,S: standard library,115,2.0788141720896602,116,116,1.008695652173913
+11,__future__,S: standard library,114,2.0607375271149673,136,156,1.368421052631579
+12,platform,S: standard library,88,1.5907447577729574,90,90,1.0227272727272727
+13,glob,S: standard library,84,1.5184381778741864,85,87,1.0357142857142858
+14,Cython,T: third-party/project-local/other,76,1.373825018076645,88,128,1.6842105263157894
+15,pkg_resources,T: third-party/project-local/other,50,0.9038322487346349,50,52,1.04
+16,numpy,T: third-party/project-local/other,50,0.9038322487346349,73,110,2.2
+17,pytest,T: third-party/project-local/other,45,0.8134490238611713,46,46,1.0222222222222221
+18,versioneer,T: third-party/project-local/other,40,0.7230657989877078,40,40,1.0
+19,pypandoc,T: third-party/project-local/other,31,0.5603759942154736,31,32,1.032258064516129
+20,ez_setup,T: third-party/project-local/other,30,0.5422993492407809,33,33,1.1
+21,multiprocessing,S: standard library,29,0.5242227042660882,29,30,1.0344827586206897
+22,shlex,S: standard library,27,0.4880694143167028,27,27,1.0
+23,json,S: standard library,25,0.45191612436731743,27,27,1.08
+24,tempfile,S: standard library,25,0.45191612436731743,25,25,1.0
+25,ast,S: standard library,23,0.41576283441793205,23,25,1.0869565217391304
+26,warnings,S: standard library,23,0.41576283441793205,23,23,1.0
+27,wheel,T: third-party/project-local/other,23,0.41576283441793205,23,25,1.0869565217391304
+28,contextlib,S: standard library,23,0.41576283441793205,23,23,1.0
+29,pip,T: third-party/project-local/other,22,0.39768618944323936,22,38,1.7272727272727273
+30,typing,S: standard library,22,0.39768618944323936,24,28,1.2727272727272727
+31,configparser,S: standard library,20,0.3615328994938539,20,20,1.0
+32,version,T: third-party/project-local/other,19,0.34345625451916123,19,19,1.0
+33,logging,S: standard library,19,0.34345625451916123,19,19,1.0
+34,fnmatch,S: standard library,16,0.28922631959508316,17,17,1.0625
+35,sysconfig,S: standard library,16,0.28922631959508316,16,16,1.0
+36,importlib,S: standard library,14,0.2530730296456978,14,14,1.0
+37,pybind11,T: third-party/project-local/other,14,0.2530730296456978,14,19,1.3571428571428572
+38,time,S: standard library,13,0.23499638467100506,13,13,1.0
+39,azure,T: third-party/project-local/other,11,0.19884309472161968,11,12,1.0909090909090908
+40,skbuild,T: third-party/project-local/other,11,0.19884309472161968,11,15,1.3636363636363635
+41,struct,S: standard library,11,0.19884309472161968,11,11,1.0
+42,argparse,S: standard library,10,0.18076644974692696,16,16,1.6
+43,textwrap,S: standard library,10,0.18076644974692696,10,10,1.0
+44,unittest,S: standard library,9,0.16268980477223427,9,9,1.0
+45,collections,S: standard library,9,0.16268980477223427,10,10,1.1111111111111112
+46,urllib,S: standard library,9,0.16268980477223427,9,13,1.4444444444444444
+47,fileinput,S: standard library,9,0.16268980477223427,9,9,1.0
+48,imp,S: standard library,8,0.14461315979754158,8,8,1.0
+49,distribute_setup,T: third-party/project-local/other,8,0.14461315979754158,8,8,1.0
+50,setuptools_rust,T: third-party/project-local/other,8,0.14461315979754158,8,9,1.125
+51,builtins,S: standard library,8,0.14461315979754158,9,9,1.125
+52,package_info,T: third-party/project-local/other,8,0.14461315979754158,8,72,9.0
+53,itertools,S: standard library,7,0.1265365148228489,7,7,1.0
+54,stat,S: standard library,7,0.1265365148228489,7,7,1.0
+55,src,T: third-party/project-local/other,7,0.1265365148228489,7,7,1.0
+56,datetime,S: standard library,7,0.1265365148228489,7,7,1.0
+57,string,S: standard library,7,0.1265365148228489,7,7,1.0
+58,tox,T: third-party/project-local/other,6,0.10845986984815618,6,6,1.0
+59,errno,S: standard library,6,0.10845986984815618,6,6,1.0
+60,tarfile,S: standard library,6,0.10845986984815618,6,6,1.0
+61,zipfile,S: standard library,6,0.10845986984815618,6,6,1.0
+62,__builtin__,T: third-party/project-local/other,6,0.10845986984815618,7,7,1.1666666666666667
+63,jupyter_packaging,T: third-party/project-local/other,6,0.10845986984815618,8,8,1.3333333333333333
+64,packaging,T: third-party/project-local/other,6,0.10845986984815618,6,6,1.0
+65,setuptools_scm,T: third-party/project-local/other,6,0.10845986984815618,6,7,1.1666666666666667
+66,sphinx,T: third-party/project-local/other,6,0.10845986984815618,6,6,1.0
+67,nose,T: third-party/project-local/other,5,0.09038322487346348,5,5,1.0
+68,ctypes,S: standard library,5,0.09038322487346348,5,6,1.2
+69,getpass,S: standard library,5,0.09038322487346348,5,5,1.0
+70,site,S: standard library,4,0.07230657989877079,4,4,1.0
+71,torch,T: third-party/project-local/other,4,0.07230657989877079,4,8,2.0
+72,requests,T: third-party/project-local/other,4,0.07230657989877079,4,7,1.75
+73,socket,S: standard library,4,0.07230657989877079,4,4,1.0
+74,commands,T: third-party/project-local/other,4,0.07230657989877079,4,4,1.0
+75,ConfigParser,T: third-party/project-local/other,4,0.07230657989877079,8,8,2.0
+76,runpy,S: standard library,4,0.07230657989877079,4,4,1.0
+77,__version__,T: third-party/project-local/other,4,0.07230657989877079,4,4,1.0
+78,Crypto,T: third-party/project-local/other,4,0.07230657989877079,4,6,1.5
+79,pylint,T: third-party/project-local/other,4,0.07230657989877079,4,6,1.5
+80,py2exe,T: third-party/project-local/other,3,0.05422993492407809,5,5,1.6666666666666667
+81,pkgutil,S: standard library,3,0.05422993492407809,3,3,1.0
+82,functools,S: standard library,3,0.05422993492407809,3,3,1.0
+83,grpc_version,T: third-party/project-local/other,3,0.05422993492407809,3,3,1.0
+84,uuid,S: standard library,3,0.05422993492407809,3,3,1.0
+85,build,T: third-party/project-local/other,3,0.05422993492407809,4,4,1.3333333333333333
+86,compiler_opt,T: third-party/project-local/other,3,0.05422993492407809,3,3,1.0
+87,ninja,T: third-party/project-local/other,3,0.05422993492407809,3,3,1.0
+88,utils,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+89,asaloader,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+90,babel,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+91,types,S: standard library,2,0.036153289949385395,2,2,1.0
+92,twine,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+93,mypyc,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+94,OpenSSL,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+95,ssl,S: standard library,2,0.036153289949385395,2,2,1.0
+96,colorname,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+97,conda,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+98,lib2to3,S: standard library,2,0.036153289949385395,2,2,1.0
+99,hashlib,S: standard library,2,0.036153289949385395,2,2,1.0
+100,six,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+101,py_compile,S: standard library,2,0.036153289949385395,2,2,1.0
+102,concurrent,S: standard library,2,0.036153289949385395,2,2,1.0
+103,_spawn_patch,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+104,_parallel_compile_patch,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+105,setupbase,T: third-party/project-local/other,2,0.036153289949385395,2,3,1.5
+106,webbrowser,S: standard library,2,0.036153289949385395,2,2,1.0
+107,setupinfo,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+108,git,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+109,dill,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+110,traceback,S: standard library,2,0.036153289949385395,2,2,1.0
+111,pipes,S: standard library,2,0.036153289949385395,2,2,1.0
+112,setup_utils,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+113,setup_helper,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+114,atexit,S: standard library,2,0.036153289949385395,2,2,1.0
+115,inspect,S: standard library,2,0.036153289949385395,2,2,1.0
+116,setuputils,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+117,test_all,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+118,pprint,S: standard library,2,0.036153289949385395,2,2,1.0
+119,m2r,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+120,winreg,S: standard library,2,0.036153289949385395,2,2,1.0
+121,Cryptodome,T: third-party/project-local/other,2,0.036153289949385395,2,4,2.0
+122,xes,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+123,cross_bdist_wininst,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+124,_ast,S: standard library,2,0.036153289949385395,2,2,1.0
+125,unlocker,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+126,toml,T: third-party/project-local/other,2,0.036153289949385395,2,2,1.0
+127,agentcoreclient,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+128,__pypy__,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+129,amazon_pay,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+130,constants,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+131,aniso8601,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+132,anyhttp,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+133,unittest2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+134,apibackuper,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+135,argreq,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+136,ascii_art,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+137,version_helpers,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+138,awscli,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+139,pyl,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+140,azure_bdist_wheel,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+141,azure_cli_bdist_wheel,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+142,beadpull,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+143,beamer,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+144,BeautifulSoup,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+145,bencoding,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+146,blazee,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+147,boot_pkg,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+148,bop,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+149,boto,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+150,buildlackey,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+151,bustard,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+152,captchasolver,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+153,ccpy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+154,cct,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+155,VERSION,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+156,snip_basic_verify2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+157,snip_setuptools_verify1,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+158,snip_setuptools_verify2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+159,snip_basic_verify,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+160,snip_setuptools_verify,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+161,snip_basic_verify1,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+162,cis,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+163,class_pool,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+164,joblib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+165,clint,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+166,simplejson,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+167,win32con,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+168,cod,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+169,codeintel,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+170,color,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+171,colorize,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+172,coloro,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+173,colorweave,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+174,colorx,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+175,coloured_logger,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+176,comtypes,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+177,win32file,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+178,configs,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+179,connect,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+180,connections,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+181,controlhost,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+182,convertmask,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+183,cookies,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+184,coolname,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+185,semver,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+186,CraftProtocol,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+187,cratergan,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+188,apu,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+189,creole,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+190,CrystalMatch,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+191,cstl,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+192,csvviz,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+193,custom,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+194,asyncio,S: standard library,1,0.018076644974692697,1,1,1.0
+195,telegram,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+196,db0905,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+197,cmake,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+198,debugpy,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+199,defusedxml,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+200,tkinter,S: standard library,1,0.018076644974692697,1,1,1.0
+201,DependencyConfusion,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+202,dhttp,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+203,disco,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+204,django_auth,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+205,django_dev,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+206,sagepay,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+207,webshell,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+208,docopt,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+209,dreque,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+210,vmtest,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+211,util,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+212,dycode,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+213,importer,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+214,ecdsa,T: third-party/project-local/other,1,0.018076644974692697,1,5,5.0
+215,emokit,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+216,errand,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+217,enscons,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+218,esockets,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+219,et_xmlfile,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+220,eventstudy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+221,extension,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+222,zipimport,S: standard library,1,0.018076644974692697,1,1,1.0
+223,locale,S: standard library,1,0.018076644974692697,1,1,1.0
+224,fastentrypoints,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+225,fastpip,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+226,fdfs_client,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+227,figlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+228,metainfo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+229,lib3to2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+230,flameprof,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+231,metainfos,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+232,StringIO,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+233,readme_renderer,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+234,bumpversion,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+235,package_obfuscator,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+236,fredlibs,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+237,freenit,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+238,fstrings,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+239,fuzzywuzzy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+240,gamera,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+241,gencode,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+242,geninstaller,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+243,wheelhouse_uploader,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+244,_setupares,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+245,_setuputils,T: third-party/project-local/other,1,0.018076644974692697,1,9,9.0
+246,_setuplibev,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+247,gitmine,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+248,gitprof,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+249,chdir,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+250,_version,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+251,grabber,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+252,granadilla,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+253,greencode,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+254,gremlin_python,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+255,_metadata,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+256,grpc_core_dependencies,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+257,status_commands,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+258,protoc_lib_deps,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+259,guitar,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+260,gunstar,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+261,setup_build,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+262,setup_configure,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+263,hackedit,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+264,pyqt_distutils,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+265,hhttpp,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+266,_markerlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+267,httoop,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+268,http,S: standard library,1,0.018076644974692697,1,1,1.0
+269,hulearn,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+270,profile_optimizer,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+271,imagesize,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+272,imblearn,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+273,nltk,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+274,inflection,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+275,compiler,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+276,injector,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+277,intellino,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+278,ipinfo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+279,ipp_utils,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+280,paypal,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+281,keyboard,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+282,kindlepush,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+283,kite,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+284,cppy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+285,krllint,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+286,ledcontrol,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+287,less_version,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+288,lfs_paypal,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+289,DistUtilsExtra,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+290,libgenesis,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+291,libgreader,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+292,libloader,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+293,libprobe,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+294,libpysat,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+295,libratone,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+296,libre,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+297,msgfmt,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+298,libtools,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+299,copy,S: standard library,1,0.018076644974692697,1,1,1.0
+300,gzip,S: standard library,1,0.018076644974692697,1,1,1.0
+301,spacy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+302,linux_profile_plugin,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+303,ezpip,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+304,litepipeline,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+305,llvmlite,T: third-party/project-local/other,1,0.018076644974692697,1,3,3.0
+306,logcraft,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+307,logger_color,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+308,logorama,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+309,luckdog,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+310,luoluo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+311,lurklib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+312,versioninfo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+313,test,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+314,pkgconfig,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+315,make_colors,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+316,mariadb_windows,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+317,mariadb_posix,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+318,maskara,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+319,vtk,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+320,xbob,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+321,mcheck,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+322,memory_profiler,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+323,metacrafter,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+324,mian,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+325,minitest,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+326,doctest,S: standard library,1,0.018076644974692697,1,1,1.0
+327,mountains,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+328,future,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+329,multitest,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+330,multitool,T: third-party/project-local/other,1,0.018076644974692697,1,3,3.0
+331,mvoauthapi,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+332,mypy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+333,typing_extensions,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+334,cpyint,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+335,setup_windows,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+336,setup_posix,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+337,nagi,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+338,nago,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+339,soyuz,T: third-party/project-local/other,1,0.018076644974692697,1,3,3.0
+340,nbdebug,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+341,ncache,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+342,neatest,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+343,_nevis_version,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+344,nodeenv,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+345,mercurial,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+346,edit_pip_configuration,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+347,nvidia_pyindex,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+348,appdirs,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+349,oauth2client,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+350,oauthlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+351,obfuscate,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+352,oc_auth,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+353,octopus,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+354,ois,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+355,olhoneles,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+356,openaoe,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+357,openaps,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+358,openxc,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+359,owlman,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+360,package,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+361,parnas,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+362,parso,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+363,ppft,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+364,pox,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+365,multiprocess,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+366,pwd,S: standard library,1,0.018076644974692697,1,1,1.0
+367,pbr,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+368,perftrackerlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+369,peyecoder,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+370,picomusic,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+371,ping,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+372,pinscrape,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+373,pip_cache,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+374,pipm,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+375,piranha,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+376,piratebay,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+377,pjson,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+378,conf,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+379,plib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+380,plotly,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+381,codegen,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+382,doc,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+383,lib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+384,pluginlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+385,plush,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+386,tests,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+387,podget,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+388,ansible,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+389,pon,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+390,random,S: standard library,1,0.018076644974692697,1,1,1.0
+391,lxml,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+392,poputils,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+393,threading,S: standard library,1,0.018076644974692697,1,1,1.0
+394,procinfo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+395,Lython,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+396,progress,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+397,progressbar,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+398,protopipe,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+399,_compat,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+400,_common,T: third-party/project-local/other,1,0.018076644974692697,1,11,11.0
+401,pu,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+402,pushmsg,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+403,pushpy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+404,sbin,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+405,googletrans,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+406,pgpipe,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+407,radius,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+408,text,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+409,wu,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+410,py_validate,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+411,pybongtvapi,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+412,lib3to6,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+413,pycl,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+414,pycloner,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+415,colors,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+416,CryptoCore,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+417,pydatagraph,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+418,pyDetectRight,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+419,pyfastcom,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+420,__init__,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+421,pyfont,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+422,pyg,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+423,pyga,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+424,distro,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+425,buildconfig,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+426,bdist_mpkg_support,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+427,msilib,S: standard library,1,0.018076644974692697,1,1,1.0
+428,pgu,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+429,pygeoip,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+430,pygrate,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+431,pipenv,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+432,pyinspire,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+433,PyInstaller,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+434,setup,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+435,pymlgame,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+436,dev,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+437,pyquicksetup,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+438,nacl,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+439,OSC,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+440,pypaystack,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+441,pypulse,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+442,pypusher,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+443,pypyrslack,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+444,pyregedit,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+445,pyrthon,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+446,pysampling,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+447,pyscada,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+448,smartcard,T: third-party/project-local/other,1,0.018076644974692697,3,3,3.0
+449,yaml,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+450,slack,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+451,sockssl,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+452,pysplitter,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+453,pysqlite2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+454,enum,S: standard library,1,0.018076644974692697,1,1,1.0
+455,html,S: standard library,1,0.018076644974692697,1,1,1.0
+456,PYSTUDY,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+457,pytbo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+458,pyd,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+459,common_setup,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+460,pythoms,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+461,nmap,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+462,sqlite_cache,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+463,stingray,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+464,python_wrapper,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+465,pytio,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+466,pytn,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+467,filemod,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+468,pytun,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+469,pytunneling,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+470,pytz,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+471,pyudorandom,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+472,pyultrasonic,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+473,vorcv,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+474,fcntl,S: standard library,1,0.018076644974692697,1,1,1.0
+475,regex,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+476,re2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+477,zmq,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+478,qpython,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+479,qtplotlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+480,base1x,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+481,randall,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+482,randog,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+483,tempita,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+484,readycheck,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+485,redistr,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+486,referenceseeker,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+487,build_helpers,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+488,replacement,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+489,replaylib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+490,repro,T: third-party/project-local/other,1,0.018076644974692697,35,138,138.0
+491,overrides,T: third-party/project-local/other,1,0.018076644974692697,7,7,7.0
+492,requesocks,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+493,my_pip_package,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+494,resend,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+495,riak_cli_tool,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+496,rload,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+497,setup_info,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+498,robust,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+499,rock,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+500,pdb,S: standard library,1,0.018076644974692697,1,1,1.0
+501,roheboam,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+502,rpgrand,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+503,salami,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+504,install_preserve,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+505,scripts,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+506,sccore,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+507,sklearn,T: third-party/project-local/other,1,0.018076644974692697,1,6,6.0
+508,array_api_compat,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+509,pyomo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+510,mattress,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+511,assorthead,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+512,scraper,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+513,scrubber,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+514,se_profile,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+515,rich,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+516,cythexts,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+517,setup_helpers,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+518,selfea,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+519,selfupdate,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+520,selva,T: third-party/project-local/other,1,0.018076644974692697,1,2,2.0
+521,loguru,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+522,setupextras,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+523,shackles,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+524,shellstreaming,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+525,shellypython,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+526,hydra,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+527,shp2postgis,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+528,shpinfo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+529,simplepso,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+530,SimpleRequests,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+531,simsogui,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+532,sling_linux_arm64,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+533,smmap,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+534,solman,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+535,sortedcontainers,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+536,sox_chords,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+537,speech_recognition,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+538,sm,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+539,spotinst_troposphere,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+540,spygame,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+541,spym,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+542,sqlibrist,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+543,sqlitelist,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+544,sqlitemodel,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+545,sqlitis,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+546,psycopg,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+547,squeaknode_proto,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+548,grpc_tools,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+549,sslproxies,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+550,stacked,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+551,startwork,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+552,patsy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+553,statsmodels,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+554,pandas,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+555,scipy,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+556,stellagban,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+557,sterm,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+558,stormhttp,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+559,stream,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+560,streamtask,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+561,stringlike,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+562,stui,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+563,sumgram,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+564,sumo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+565,supernodes,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+566,superpyMisc,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+567,supportbot,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+568,svnpuppy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+569,swift_scality_backend,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+570,swiftype,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+571,symlearn,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+572,sympy,T: third-party/project-local/other,1,0.018076644974692697,1,3,3.0
+573,synonym,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+574,systemd,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+575,netservice,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+576,taemin,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+577,tasdos,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+578,tcconfig,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+579,tcping,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+580,telegram_send,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+581,teletiffinfo,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+582,freecad,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+583,tensorspacejs,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+584,testlib,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+585,testoot,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+586,testtube,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+587,timerpy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+588,titus,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+589,version_template,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+590,translitua,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+591,setup_boilerplate,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+592,ipykernel,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+593,jupyter_client,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+594,trendy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+595,tryhackme,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+596,publisher,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+597,ttlsuite,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+598,tully,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+599,tupload,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+600,sagemath,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+601,urllib2,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+602,txrequests,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+603,setupmeta_builder,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+604,ran,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+605,typetrainer,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+606,uberpong,T: third-party/project-local/other,1,0.018076644974692697,1,4,4.0
+607,ultralite,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+608,url_downloader,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+609,utoolc,T: third-party/project-local/other,1,0.018076644974692697,1,3,3.0
+610,configobj,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+611,value,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+612,vint,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+613,virtualreality,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+614,vlivepy,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+615,vquest,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+616,tensorflow,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+617,wbe,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+618,web,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+619,gluon,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+620,west_ishara,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+621,xbox,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+622,xcookie,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+623,black,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+624,ubelt,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+625,xiblint,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+626,xlrd,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+627,xmltodict,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+628,xpip,T: third-party/project-local/other,1,0.018076644974692697,1,9,9.0
+629,xulpymoney,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+630,stdnum,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+631,xycrypto,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+632,yamp,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+633,wechat,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+634,zappa_packer,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+635,zoom,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
+636,zopkio,T: third-party/project-local/other,1,0.018076644974692697,1,1,1.0
