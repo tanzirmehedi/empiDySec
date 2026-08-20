@@ -10,12 +10,12 @@ This directory documents six verified malicious PyPI packages previously labeled
 
 | Package | Version | Total downloads | Last update | Platform | Distribution |
 |---|---|---|---|---|---|
-| [CyberOsint](https://inspector.pypi.io/project/cyberosint/0.4/) | 0.4 | 15,000 | 2024-07-29 | OS Independent | sdist |
-| [discord_command](https://inspector.pypi.io/project/discord-command/0.0.2/) | 0.0.2 | 150,000 (top 10%) | 2021-06-16 | OS Independent | sdist |
-| [eth-abcde](https://inspector.pypi.io/project/eth-abcde/0.2.3/) | 0.2.3 | 479 | 2023-09-28 | OS Independent | sdist |
-| [infoind](https://inspector.pypi.io/project/infoind/3897/) | 3897 | 848 | 2023-07-21 | OS Independent | sdist |
-| [Pytonlib](https://inspector.pypi.io/project/pytonlib/0.0.0/) | 0.0.0 | 51,235 | 2024-06-16 | OS Dependent | sdist |
-| [vermillion](https://inspector.pypi.io/project/vermillion/0.5/) | 0.5 | 2,800 | 2024-03-02 | OS Dependent | sdist |
+| [CyberOsint](https://inspector.pypi.io/project/cyberosint/0.4/packages/99/7c/c8a1caf020bc60504b00c5bff7a28ae79d97a5d40d44e068d709dadd298f/CyberOsint-0.4.tar.gz/) | 0.4 | 15,000 | 2024-07-29 | OS Independent | sdist |
+| [discord_command](https://inspector.pypi.io/project/discord-command/0.0.2/packages/6c/03/1448a5eeb17d04f2b20be1d4c698296e1ccd42f92a528799398fdf7a191d/discord_command-0.0.2.tar.gz/) | 0.0.2 | 150,000 (top 10%) | 2021-06-16 | OS Independent | sdist |
+| [eth-abcde](https://inspector.pypi.io/project/discord-command/0.0.1/packages/6c/03/1448a5eeb17d04f2b20be1d4c698296e1ccd42f92a528799398fdf7a191d/discord_command-0.0.2.tar.gz/) | 0.2.3 | 479 | 2023-09-28 | OS Independent | sdist |
+| [infoind](https://inspector.pypi.io/project/infoind/3897/packages/4c/1b/779eeab098e03fe860ad1ae7f026a53e13621de09fb2b940bdde9c05d376/infoind-3897.tar.gz/) | 3897 | 848 | 2023-07-21 | OS Independent | sdist |
+| [Pytonlib](https://inspector.pypi.io/project/pytonlib/0.0.1/packages/31/c2/d7786423b1dba56cab1739c7993195246b8043f98ce4bcdb0b47b8a96607/pytonlib-0.0.1.tar.gz/ ) | 0.0.0 | 51,235 | 2024-06-16 | OS Dependent | sdist |
+| [vermillion](https://inspector.pypi.io/project/vermillion/0.5/packages/00/e6/67390b9dcf6cd427bf15d9163be3095697a4e32dbc7aaf001deced8cac41/vermillion-0.5.tar.gz/) | 0.5 | 2,800 | 2024-03-02 | OS Dependent | sdist |
 
 Because all six distributions have been removed from the index, the PyPI JSON API no longer serves records for them; download counts are therefore taken from [ClickPy](https://clickpy.clickhouse.com/), which retains historical telemetry for withdrawn projects.
 
@@ -30,11 +30,11 @@ The six verified malicious packages span different trigger times and observed do
 | Package | Trigger | Observed dominant signal |
 |---|---|---|
 | CyberOsint† | install | Process spawn + network I/O |
-| discord_command† | post-install | Network I/O / token exfiltration |
+| discord_command† | post-install | Network I/O + token exfiltration |
 | eth-abcde | post-install | State transition + network I/O |
-| infoind | import | Obfuscated dynamic execution |
-| Pytonlib | install | Install process + remote fetch |
-| vermillion | user-run | File I/O / binary drop |
+| infoind | import | Obfuscated syscall execution |
+| Pytonlib | install | Process + remote fetch |
+| vermillion | user-run | File I/O + binary drop |
 
 ---
 
