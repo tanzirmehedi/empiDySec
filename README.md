@@ -22,7 +22,7 @@ The study is operationalized through **empiDySec** - an efficient, stable, and e
 6. **Adversarial Attack and Training** - adversarial attack and training 
 
 <p align="center">
-  <img src="Images/threat_model.drawio.png" alt="Threat Model" width="60%">
+  <img src="Images/threat_model.png" alt="Threat Model" width="60%">
 </p>
 <p align="center"><b>Figure 1: System and threat model. Red denotes adversarial entities and actions.</b></p>
 
