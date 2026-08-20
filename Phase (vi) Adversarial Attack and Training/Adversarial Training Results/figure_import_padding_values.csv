@@ -1,0 +1,4 @@
+﻿Configuration,Original + Padded,Original + Padded CI,AT + Padded,AT + Padded CI,AT + Unmodified,AT + Unmodified CI,Original + Unmodified,Original + Unmodified CI,Runs
+Standard,0.83178,0.00705,0.95327,0.00546,0.98131,0.00315,0.98972,0.00211,10
+Third-party,0.8972,0.0063,0.97196,0.00446,0.98224,0.00379,0.98972,0.00211,10
+Combined,0.85981,0.00772,0.96262,0.00546,0.97944,0.00423,0.98972,0.00211,10
