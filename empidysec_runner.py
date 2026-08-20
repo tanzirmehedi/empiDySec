@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-End-to-end runner for the eDySec repository.
+End-to-end runner for the empiDySec repository.
 
 What this script does
 ----------------------
 1. Checks the repository structure and warns about missing key folders/files.
 2. Optionally installs dependencies from requirements.txt.
 3. Discovers notebooks across nested folders and subfolders.
-4. Executes notebooks in the correct phase order.
+4. Executes notebooks across all six phases in the correct order.
 5. Saves executed notebook copies while preserving the original folder structure.
 """
 
@@ -48,6 +48,9 @@ PHASE4_PRIORITY = [
     "Phase (iv) Stability and Explainability/Explainability Analysis/FLAML_MLP_Combined_XAI.ipynb",
     "Phase (iv) Stability and Explainability/Stability Analysis/Stability_Analysis.ipynb",
 ]
+
+PHASE5_DIR = "Phase (v) Baseline Comparison"
+PHASE6_DIR = "Phase (vi) Adversarial Attack and Training"
 
 FEATURE_METHODS = ["ANOVA", "CORR", "FLAML", "PSO", "WOA"]
 TRACE_NAMES = ["Combined", "Filetop", "Install", "Opensnoop", "Pattern", "SysCall", "TCP"]
@@ -227,6 +230,8 @@ def validate_repo_structure(repo_root: Path) -> bool:
         repo_root / "Phase (ii) Feature Selection",
         repo_root / "Phase (iii) Model Selection and Evaluation",
         repo_root / "Phase (iv) Stability and Explainability",
+        repo_root / PHASE5_DIR,
+        repo_root / PHASE6_DIR,
     ]
 
     ok = True
@@ -395,12 +400,38 @@ def discover_phase4_notebooks(repo_root: Path) -> List[Path]:
     return priority + others
 
 
+def discover_notebooks_recursively(repo_root: Path, phase_dir: str) -> List[Path]:
+    """Discover executable notebooks recursively within a repository phase."""
+    base = repo_root / phase_dir
+    if not base.exists():
+        warn(f"Missing phase directory: {base}")
+        return []
+
+    return [
+        path
+        for path in sorted(base.rglob("*.ipynb"))
+        if not should_skip_path(path)
+    ]
+
+
+def discover_phase5_notebooks(repo_root: Path) -> List[Path]:
+    """Discover baseline-comparison notebooks."""
+    return discover_notebooks_recursively(repo_root, PHASE5_DIR)
+
+
+def discover_phase6_notebooks(repo_root: Path) -> List[Path]:
+    """Discover adversarial-attack and adversarial-training notebooks."""
+    return discover_notebooks_recursively(repo_root, PHASE6_DIR)
+
+
 def discover_all_notebooks(repo_root: Path, method: str = "all", trace: str = "all") -> List[Path]:
     notebooks: List[Path] = []
     notebooks.extend(collect_existing_paths(repo_root, PHASE1_NOTEBOOKS))
     notebooks.extend(discover_phase2_notebooks(repo_root, method=method))
     notebooks.extend(discover_phase3_notebooks(repo_root, method=method, trace=trace))
     notebooks.extend(discover_phase4_notebooks(repo_root))
+    notebooks.extend(discover_phase5_notebooks(repo_root))
+    notebooks.extend(discover_phase6_notebooks(repo_root))
 
     unique: List[Path] = []
     seen: set[Path] = set()
@@ -422,6 +453,10 @@ def discover_by_phase(repo_root: Path, phase: str, method: str = "all", trace: s
         return discover_phase3_notebooks(repo_root, method=method, trace=trace)
     if phase == "4":
         return discover_phase4_notebooks(repo_root)
+    if phase == "5":
+        return discover_phase5_notebooks(repo_root)
+    if phase == "6":
+        return discover_phase6_notebooks(repo_root)
     if phase == "all":
         return discover_all_notebooks(repo_root, method=method, trace=trace)
     raise ValueError(f"Unsupported phase: {phase}")
@@ -668,7 +703,12 @@ def parse_args() -> argparse.Namespace:
     setup_parser.add_argument("--upgrade-pip", action="store_true", help="Upgrade pip before installing packages.")
 
     run_parser = subparsers.add_parser("run", parents=[common], help="Discover and execute notebooks.")
-    run_parser.add_argument("--phase", default="all", choices=["1", "2", "3", "4", "all"], help="Which phase to run.")
+    run_parser.add_argument(
+        "--phase",
+        default="all",
+        choices=["1", "2", "3", "4", "5", "6", "all"],
+        help="Phase to run: 1, 2, 3, 4, 5, 6, or all.",
+    )
     run_parser.add_argument("--method", default="all", help="Feature-selection method: all, ANOVA, CORR, FLAML, PSO, WOA.")
     run_parser.add_argument("--trace", default="all", help="Trace type: all, Combined, Filetop, Install, Opensnoop, Pattern, SysCall, TCP.")
     run_parser.add_argument("--kernel", default="python3", help="Jupyter kernel name. Default: python3")
