@@ -14,7 +14,7 @@
 This repository contains the non-sensitive replication artifacts for an empirical study of deep-learning-based detection of malicious PyPI packages from **install-time and post-installation behavior**. The study examines whether detection depends more on behavioral representation quality than on additional architectural complexity, and evaluates adaptive robustness, run-to-run stability, explainability, and package-level validity within one fixed pipeline.
 
 <p align="center">
-  <img src="Images/threat_model.png" alt="System and threat model" width="70%">
+  <img src="Images/threat_model.png" alt="System and threat model" width="50%">
 </p>
 <p align="center"><b>Figure 1. System and threat model. Pi and Pi-prime denote the original package and its transformed adversarial variant.</b></p>
 
