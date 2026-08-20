@@ -49,7 +49,7 @@ Its metadata is the tell. The sdist directory is `eth-abcde-0.2.3`, while `PKG-I
 
 `infoind` hides its actual code behind two layers of AES-CBC encryption and recovers the key by brute force: a counter starts at zero and increments, decryption is attempted with each candidate, and the loop stops when the output decodes as valid UTF-8 instead of raising `UnicodeDecodeError`. The recovered plaintext goes straight to `exec()`.
 
-![Inspector view of infoind's osint.py showing the BruteForce key-recovery loop above the embedded AES ciphertext.](figures/infoind_Malicious_Code.png)
+![Inspector view of infoind's osint.py showing the BruteForce key-recovery loop above the embedded AES ciphertext.](infoind_Malicious_Code.png)
 
 Unwrap both layers and you get something almost disappointing — a short script that scrapes Google for download links and shells out to `pip3 install` for its own dependencies. The payload is benign in effect.
 
