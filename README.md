@@ -31,10 +31,10 @@ The evaluation uses the publicly available **QUT-DV25** dataset, which records a
 
 The paper addresses four research questions:
 
-- **RQ1 — Representation and detection:** Which combination of behavioral representation and learning architecture yields accurate, low-latency detection from install-time and post-installation traces?
-- **RQ2 — Adaptive robustness:** How robust is detection against adaptive, package-realizable transformations that must preserve malicious behavior?
-- **RQ3 — Stability:** How stable are the resulting detectors across repeated training runs?
-- **RQ4 — Explainability:** Do post-hoc explanations attribute verdicts to meaningful security behavior?
+- **RQ1 - Representation and detection:** Which combination of behavioral representation and learning architecture yields accurate, low-latency detection from install-time and post-installation traces?
+- **RQ2 - Adaptive robustness:** How robust is detection against adaptive, package-realizable transformations that must preserve malicious behavior?
+- **RQ3 - Stability:** How stable are the resulting detectors across repeated training runs?
+- **RQ4 - Explainability:** Do post-hoc explanations attribute verdicts to meaningful security behavior?
 
 ### Phase-to-question mapping
 
