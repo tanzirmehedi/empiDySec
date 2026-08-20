@@ -16,10 +16,15 @@ This repository contains the non-sensitive replication artifacts for an empirica
 The evaluation uses the publicly available **QUT-DV25** dataset, which records aggregate system-call, file, installation, network, resource-use, dependency, and execution-pattern behavior. The repository is organized into six experimental phases:
 
 **Phase (i): Data Preparation**
+
 **Phase (ii): Feature Selection**
+
 **Phase (iii): Model Selection and Evaluation**
+
 **Phase (iv): Stability and Explainability**
+
 **Phase (v): Baseline Comparison**
+
 **Phase (vi): Adversarial Attack and Training**
 
 <p align="center">
