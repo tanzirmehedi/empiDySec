@@ -1,4 +1,4 @@
-## An Empirical Study of Deep Learning for Dynamic Behavioral Detection of Malicious Software Packages in the PyPI Ecosystem
+## Detecting Malicious PyPI Packages from Execution Traces: An Empirical Study
 
 **Replication Package - empiDySec (Empirical Dynamic Security)**
 
