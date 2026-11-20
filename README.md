@@ -96,7 +96,7 @@ The pre-attention (RNN and LSTM) and attention-based models operate on a seriali
 ```text
 empiDySec/
 ├── Images/
-├── Malicious Report/
+├── Operational Validation/
 ├── Phase (i) Data Preparation/
 ├── Phase (ii) Feature Selection/
 ├── Phase (iii) Model Selection and Evaluation/
@@ -112,7 +112,7 @@ empiDySec/
 └── requirements.txt
 ```
 
-The `Malicious Report/` directory contains sanitized verification evidence and disclosure-related material. It does not redistribute malicious package archives or deployable payloads.
+The `Operational Validation/` directory contains sanitized verification evidence and disclosure-related material. It does not redistribute malicious package archives or deployable payloads.
 
 ## Phase-by-Phase Reproduction
 
