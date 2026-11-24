@@ -173,7 +173,7 @@ Reports should contain sufficient technical evidence for investigation, such as:
 
 Researchers should avoid publicly releasing sensitive exploitation details before affected packages have been investigated and appropriate mitigation or removal has occurred.
 
-During the reported study, two previously unknown malicious packages were identified through QUT-DV25 benchmark-label verification, while four additional malicious packages were identified during independent evaluation of 222 recent PyPI packages.
+During the reported study, two previously unknown malicious packages were identified through QUT-DV25 benchmark-label verification, while four additional malicious packages were identified during independent evaluation of 522 recent PyPI packages.
 
 These findings were reported through responsible-disclosure procedures, and the six identified packages were subsequently removed from PyPI.
 
