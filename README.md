@@ -11,7 +11,7 @@
 
 ## Study Overview
 
-This repository contains the non-sensitive replication artifacts for an empirical study of deep-learning-based detection of malicious PyPI packages from **install-time and post-installation behavior**. The study examines whether detection depends more on behavioral representation quality than on additional architectural complexity, and evaluates adaptive robustness, run-to-run stability, explainability, and package-level validity within one fixed pipeline.
+This repository contains non-sensitive replication artifacts for an empirical study of deep-learning-based detection of malicious PyPI packages from **install-time and post-installation behavior**. It evaluates behavioral representations and learning architectures, query-free problem-space evasion and adversarial training, repeated-run stability, explanation agreement and sensitivity, temporal generalization, and operational threat verification.
 
 <p align="center">
   <img src="Images/threat_model.png" alt="System and threat model" width="50%">
@@ -32,9 +32,9 @@ The evaluation uses the publicly available **QUT-DV25** dataset, which records a
 The paper addresses four research questions:
 
 - **RQ1 - Representation and detection:** Which combination of behavioral representation and learning architecture yields accurate, low-latency detection from install-time and post-installation traces?
-- **RQ2 - Adaptive robustness:** How robust is detection against adaptive, package-realizable transformations that must preserve malicious behavior?
+- **RQ2 - Adversarial robustness:** How robust is detection against package-realizable transformations that must preserve malicious behavior?
 - **RQ3 - Stability:** How stable are the resulting detectors across repeated training runs?
-- **RQ4 - Explainability:** Do post-hoc explanations attribute verdicts to meaningful security behavior?
+- **RQ4 - Explainability:** How consistent, stable, and sensitive are post-hoc explanations of behavioral features?
 
 ### Phase-to-question mapping
 
@@ -43,8 +43,8 @@ The paper addresses four research questions:
 | Phase (i) Data Preparation | Prepare the fixed split and characterize the trace sources | RQ1 |
 | Phase (ii) Feature Selection | Compare statistical, AutoML, and metaheuristic selectors | RQ1 |
 | Phase (iii) Model Selection and Evaluation | Train and select DL architectures using validation-only criteria | RQ1 |
-| Phase (iv) Stability and Explainability | Measure repeated-run variation and generate post-hoc explanations | RQ3, RQ4 |
-| Phase (v) Baseline Comparison | Compare the selected detector with ML baselines and audit prediction-label disagreements | RQ1 and operational validation |
+| Phase (iv) Stability and Explainability | Measure repeated-run variation, explanation agreement, and feature-attribution sensitivity | RQ3, RQ4 |
+| Phase (v) Baseline Comparison | Compare ML baselines, evaluate temporal generalization, and audit prediction-label disagreements | RQ1 and operational validation |
 | Phase (vi) Adversarial Attack and Training | Evaluate behavior-preserving import padding and adversarial training | RQ2 |
 
 ## Dataset: QUT-DV25
@@ -89,6 +89,8 @@ The core evaluation combines:
 
 Models are trained and evaluated on the same fixed stratified split. Preprocessing and feature selection are fitted using training data; validation labels are used for subset, hyperparameter, threshold, and architecture selection. Test labels are reserved for final evaluation. Across architectures, the detector with the highest mean validation F1 across ten runs is selected, with ties broken by lower mean validation loss and then fewer parameters.
 
+The primary **70/15/15 stratified package-level split** contains 2,141 test packages. A separate time-disjoint evaluation assigns packages by publication month: training before July 2023, validation from July 2023 to June 2024, and testing from July 2024 to December 2025 (2,854 test packages). Temporal preprocessing, feature selection, model and threshold selection use only the corresponding training and validation partitions. The original stratified split is not family-disjoint; QUT-DV25 does not supply malware-family annotations. Among stratified test packages, 81 (3.78%) have a training neighbor with cosine similarity above 0.95; excluding them changes F1 by at most 0.002.
+
 The pre-attention (RNN and LSTM) and attention-based models operate on a serialized aggregate-feature representation; the serialization does **not** reconstruct event chronology. Architectural conclusions therefore apply to the evaluated aggregate representation, not to raw ordered event streams.
 
 ## Repository Structure
@@ -96,7 +98,7 @@ The pre-attention (RNN and LSTM) and attention-based models operate on a seriali
 ```text
 empiDySec/
 ├── Images/
-├── Malicious Report/
+├── Operational Validation/
 ├── Phase (i) Data Preparation/
 ├── Phase (ii) Feature Selection/
 ├── Phase (iii) Model Selection and Evaluation/
@@ -112,7 +114,7 @@ empiDySec/
 └── requirements.txt
 ```
 
-The `Malicious Report/` directory contains sanitized verification evidence and disclosure-related material. It does not redistribute malicious package archives or deployable payloads.
+The `Operational Validation/` directory contains sanitized verification evidence and disclosure-related material. It does not redistribute malicious package archives or deployable payloads.
 
 ## Phase-by-Phase Reproduction
 
@@ -201,7 +203,7 @@ This phase supports RQ3 and RQ4.
 
 The **stability analysis** summarizes accuracy, precision, recall, F1, and ranking variation across ten repeated training runs on the fixed split. These results characterize repeated-training variation, not uncertainty from dataset resampling or distribution shift.
 
-The **explainability analysis** applies SHAP and LIME to the validation-selected MLP. It reports global and local attributions, cross-run ranking stability, explainer agreement, and explanations for audited package-level cases. Agreement and stability do not by themselves establish causal faithfulness.
+The **explainability analysis** applies SHAP and LIME to the validation-selected MLP. It reports global and local attributions, SHAP agreement with feature selection, cross-run ranking stability, and explainer agreement. It also replaces top-ranked, bottom-ranked, and randomly selected behavioral attributes with training-derived reference values to assess held-out predictive sensitivity across ten runs. Attribute rankings for this sensitivity test are obtained from validation data. Agreement and sensitivity do not establish causal necessity or package-realizable attack effects.
 
 ```text
 Phase (iv) Stability and Explainability/
@@ -217,9 +219,11 @@ python empidysec_runner.py run --phase 4
 
 ### Phase (v): Baseline Comparison
 
-This phase compares the selected MLP with the random-forest baseline and matched-feature ML baselines. It reports aggregate metrics, confusion counts, paired tests, alert burden under realistic malicious-package prevalence, and computational cost.
+This phase compares the selected MLP with the original 36-attribute random-forest baseline and matched-feature ML baselines. It reports confusion matrices, paired tests, deployment-prevalence alert projections, computational costs, and supplementary time-disjoint performance. Prevalence projections assume benchmark detection rates transfer to deployment.
 
 It also audits prediction-label disagreements using installation and post-installation traces, process and filesystem activity, network communication, dependency behavior, and retrieved payload evidence. Primary benchmark labels and metrics remain unchanged; confirmed cases therefore provide a lower bound on benchmark mislabeling.
+
+The separate **recent-PyPI operational evaluation** covers 522 packages published during August–October 2026, excluded from all training, validation, model selection, and threshold tuning. Seven detectors are compared in total: the proposed MLP, DySec, OSCAR, One Detector, GuardDog, CLAMPD-Net, and VirusTotal (alert threshold: at least one positive engine). Three reviewers investigate flagged packages. Because unflagged packages are not exhaustively audited, the study reports verified alert precision and unique findings, **not** population-level recall or false-positive rate. Verification records and responsible-disclosure evidence are provided in `Operational Validation/`.
 
 ```text
 Phase (v) Baseline Comparison/
@@ -239,7 +243,7 @@ This phase evaluates a pipeline-aware adversary that inserts benign-looking impo
 - **Third-party**; and
 - **Combined**.
 
-The attack is executed in the package problem space: each transformed package is rebuilt, reinstalled, and re-executed. Successful evasion requires both detector misclassification and continued observability of the package's original disruption behavior. The analysis therefore reports:
+The attack is executed in the package problem space: each transformed package is rebuilt, reinstalled, and re-executed with the same fitted tracing and preprocessing pipeline. The attack **does not query the detector or adapt to published SHAP/LIME feature rankings**. A successful *attack-induced* evasion requires a package that was originally detected to be misclassified after modification while retaining its original disruption behavior. The analysis reports:
 
 - mean TPR before and after padding;
 - behavior-preservation counts;
@@ -247,7 +251,7 @@ The attack is executed in the package problem space: each transformed package is
 - cross-configuration intersections; and
 - matching-configuration adversarial-training recovery and clean-data cost.
 
-The behavior-preservation evaluation uses the fixed 107-package subset whose original executions exhibit an externally observable disruption behavior. Results do not generalize automatically to all payload types or unseen transformations.
+The evaluation uses a fixed 107-package subset whose original execution exhibits observable freezing, infinite waiting, shutdown, or version looping. Each of the three configurations generates one modified package per original (321 evaluation variants). Preservation checks confirm the original disruption remains observable, **not** that all malicious functions are equivalent. Adversarial-training variants are not independently verified for behavioral preservation. The findings do not establish robustness against unseen transformations, feature-aware adaptation, or cross-configuration attacks.
 
 ```text
 Phase (vi) Adversarial Attack and Training/
@@ -372,13 +376,15 @@ The phases should be executed in order because later notebooks may consume split
 
 ## Main Reproduced Findings
 
-The repository supports reproduction of the paper's three principal security findings:
+The repository supports reproduction of the paper's principal empirical findings:
 
-1. **Representation quality:** security-relevant information is concentrated in 17 of 36 aggregate attributes. On the evaluated serialized aggregate representation, the selected feed-forward MLP outperforms the evaluated pre-attention and attention-based models and reduces false positives and false negatives relative to the random-forest baseline.
-2. **Behavior-preserving robustness:** import padding lowers detection, but practical evasion is constrained by the need to preserve the original malicious behavior; matching-configuration adversarial training recovers most of the induced loss.
-3. **Package-level validity:** investigation confirms six benign-labeled packages as malicious, including two previously unknown threats removed by PyPI following disclosure.
+1. **Representation and detection (RQ1):** FLAML selects 17 of 36 original aggregate attributes. In the stratified reference run, the selected MLP reduces the original RF baseline's false positives from 34 to 6 (82.35%) and false negatives from 52 to 11 (78.85%). The MLP's F1 decreases from approximately 0.99 to 0.97 under time-disjoint evaluation, indicating a temporal-generalization limitation.
+2. **Behavior-preserving robustness (RQ2):** import padding reduces mean detection TPR by 9.25–15.79 percentage points. Reference-run overall behavior-preserving attack success is 8.41–14.95%; matching-configuration adversarial training recovers 76.95–80.86% of the induced detection loss, with a 0.75–1.03 percentage-point cost on unmodified packages.
+3. **Run-to-run stability (RQ3):** across ten training seeds, MLP, MDCNN, and NN reach mean F1 of 0.988 with standard deviation 0.004 on the fixed stratified split. These intervals characterize training variation, not uncertainty over independent datasets.
+4. **Explanation agreement and sensitivity (RQ4):** SHAP and LIME achieve mean Overlap@5 of 0.81 and ranking stability correlations of 0.89 and 0.85, respectively. Replacing the top five SHAP-ranked attributes decreases F1 by 0.041, compared with 0.013 for random and 0.006 for bottom-ranked controls. These are input-level sensitivity results, not causal claims.
+5. **Operational validation:** review confirms six QUT-DV25 packages labeled benign were malicious, including two newly identified cases (`CyberOsint-0.4` and `discord_command-0.0.2`) removed after disclosure. On 522 recent PyPI packages, the seven detectors collectively flagged eight unique packages: four were confirmed malicious and removed after disclosure. The proposed MLP identified three among five alerts-`tronlinker-0.0.1`, `pyservercheck-0.1.1`, and `rce_test-0.1` (verified alert precision 0.60)-while the static One Detector found a Windows-specific case (`syswatch-1.0.0`) the Linux-based MLP missed.
 
-Exact metrics, uncertainty intervals, reference-run counts, and statistical procedures should be taken from the accompanying paper and the generated result files rather than inferred from this overview.
+Detailed uncertainty intervals, individual detector comparisons, and statistical procedures are documented in the accompanying paper and the generated results. Alert precision for the recent-package collection is conditional on reviewed alerts, not a population-wide precision guarantee.
 
 ## Reproducibility Notes
 
@@ -388,6 +394,8 @@ Exact metrics, uncertainty intervals, reference-run counts, and statistical proc
 - Hardware, CUDA/cuDNN versions, and nondeterministic GPU operations may cause small numerical differences.
 - The `MCDCNN` label may appear in legacy code or intermediate artifacts; it refers to the `MDCNN` architecture reported in the paper.
 - Conclusions about pre-attention and attention-based models are restricted to the serialized aggregate-feature representation and do not cover raw chronological event streams.
+- All model-selection and threshold decisions precede evaluation of the 522 recent PyPI packages; their results do not feed back into model development.
+- Feature-attribution perturbations operate on model inputs; they are not executable package modifications and do not demonstrate causal importance or feature-aware adversarial success.
 
 ## Ethics and Safe Use
 
@@ -412,4 +420,3 @@ For QUT-DV25, use the dataset citation supplied with the dataset DOI.
 ## License
 
 This repository is distributed under the terms in `LICENSE`. Dataset use is also subject to the QUT-DV25 license and terms.
-
